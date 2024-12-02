@@ -2,7 +2,7 @@
 
 
 </br>
-<img src="proyecto-maquetado\src\assets\image.png">
+<img src="proyecto-maquetado\src\assets\imagen-doc.png">
 
 </br>
 
