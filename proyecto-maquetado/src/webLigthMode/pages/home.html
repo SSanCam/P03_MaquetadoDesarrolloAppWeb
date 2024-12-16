@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Refugio Kimba</title>
     <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
     <div id="background">
-        <div id="cuerpoPrincipal">
+        <div id="body">
             <!-- Contenedor principal para los elementos -->
             <div id="cuerpoHome">
                 <div id="texto">
@@ -29,23 +29,10 @@ ofreciéndoles el hogar que merecen.
             </div>
         </div>
     </div>
-    <!-- Footer dinámico -->
-    <footer id="footer"></footer>
 
-    <!-- Script para cargar footer dinámicamente -->
-    <script>
-        (async function loadFooter() {
-            try {
-                const response = await fetch('../src/webLigthMode/pages/footer.html'); // Ruta corregida
-                if (!response.ok) throw new Error('Error al cargar el footer');
-                const footerContent = await response.text();
-                document.getElementById('footer').innerHTML = footerContent;
-            } catch (error) {
-                console.error('No se pudo cargar el footer:', error);
-            }
-        })();
-    </script>
 
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
     <script src="../js/home.js"></script>
 </body>
 

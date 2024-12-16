@@ -6,18 +6,20 @@
 
 </br>
 
-**I.E.S.Rafael Alberti, 2ºDAW**
-
-**Sara Sánchez Camilleri**
+**I.E.S.Rafael Alberti, 2ºDAW** | **Sara Sánchez Camilleri**
 
 
 https://envasador.github.io/DIW/docs/proyectos/proyecto3/
 
-</br></br></br></br></br></br>
+</br>
+</br>
 
 ## 1. Descripción del proyecto 
 
 En este proyecto desarrollarás una aplicación web de una sola página (SPA) que consuma una API REST pública y muestre sus datos de forma dinámica. La navegación entre las distintas secciones de la aplicación se gestionará mediante React Router, permitiendo una experiencia fluida sin recargas de página. 
+
+</br>
+</br>
 
 
 ## 2. Objetivos del proyecto

@@ -1,0 +1,77 @@
+/* Configuración inicial */
+* {
+    box-sizing: border-box; /* Ajusta el modelo de caja */
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina rellenos predeterminados */
+}
+
+
+
+/* Fondo */
+#background {
+    background-image: url("../../assets/home/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido principal */
+#cuerpoHome {
+    text-align: center;
+}
+
+
+/* Contenedor principal del contenido */
+main#cuerpoPrincipal {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Alinea el texto al centro */
+    height: calc(100vh - 10vh); /* Resta el espacio del footer */
+}
+
+/* Estilos del título principal */
+#titulo {
+    font-size: 5vw; /* Tamaño ajustable según el ancho de la ventana */
+    font-weight: bold; /* Resalta el título */
+    color: #000000; /* Color negro */
+    margin-bottom: 1rem; /* Separación inferior */
+}
+
+/* Estilos del subtítulo */
+#subtitulo {
+    font-size: 1.5vw; /* Tamaño ajustable según el ancho de la ventana */
+    color: #33691D; /* Color verde oscuro */
+    margin-bottom: 1rem; /* Separación inferior */
+}
+
+/* Estilos del lema */
+#lema {
+    font-size: 1.5vw; /* Tamaño ajustable según el ancho de la ventana */
+    color: #000000; /* Color negro */
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+    max-width: 80%; /* Limita el ancho del texto */
+    margin: auto; /* Centra horizontalmente */
+}
+
+/* Estilos del botón */
+#botonEntrar {
+    padding: 1rem 2rem; /* Espaciado interno */
+    background-color: #8BC24A; /* Color de fondo verde */
+    color: white; /* Color del texto */
+    font-size: 1.5vw; /* Tamaño ajustable según el ancho de la ventana */
+    border-radius: 50px; /* Bordes redondeados */
+    border: none; /* Sin borde */
+    margin-top: 2rem; /* Separación superior */
+    cursor: pointer; /* Indica interactividad */
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+#botonEntrar:hover {
+    background-color: #33691D; /* Cambia a verde oscuro al pasar el ratón */
+}
