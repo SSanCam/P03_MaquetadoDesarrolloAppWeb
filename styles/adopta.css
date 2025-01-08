@@ -22,6 +22,25 @@
     margin-bottom: 20px;
 }
 
+.informacion-previa {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo claro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    border-left: 5px solid #33691D; /* Línea decorativa lateral */
+    font-size: 0.5rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.informacion-previa p {
+    margin: 0;
+    color: #333; /* Texto oscuro para mejor legibilidad */
+}
+
+
 label {
     font-weight: bold;
     display: block;

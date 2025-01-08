@@ -213,9 +213,18 @@ header {
 /* ======================= */
 
 .container-main {
-    padding-top: 12vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 12vh; /* Ajustado para evitar solapamiento con el header */
     padding-bottom: 12vh;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
 }
+
 
 /* ======================= */
 /* FOOTER */
