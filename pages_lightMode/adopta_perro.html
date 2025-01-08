@@ -80,7 +80,8 @@
 
             <div class="header-right">
                 <a href="#" class="icon"><img src="../media/iconos/lupa.png" alt="Buscar"></a>
-                <a href="#" class="icon toggle-darkmode"><img src="../media/iconos/luna.png" alt="Modo oscuro"></a>
+                <a href="../pages_darkMode/adopta_perro_DM.html" class="icon toggle-darkmode"><img
+                        src="../media/iconos/luna.png" alt="Modo oscuro"></a>
                 <a href="perfil.html" class="icon"><img src="../media/iconos/perfil_LM.png" alt="Perfil"></a>
             </div>
 
@@ -90,45 +91,61 @@
 
     <!-- CONTENIDO PRINCIPAL -->
     <main class="container-main">
-        <h1>🐶 Perros en Adopción</h1>
-
-        <section class="grid-adopcion">
+        <!-- Contenedor de la tarjeta 1 -->
+        <div class="adopciones">
             <div class="tarjeta">
                 <div class="imagen-container">
-                    <img src="../media/perros/perro1/truan1.png" alt="Luna">
-                    <p class="descripcion">Luna - 2 años - Juguetona y cariñosa.</p>
+                    <img src="../media/perros/perro1/truan1.png" alt="Luna" class="imagen-perro">
+                    <p class="descripcion">Truán - Galgo adulto super sociable</p>
                 </div>
+
+                <!-- MODAL (Galería de imágenes del perro) -->
+                <div class="modal" id="modal-luna">
+                    <div class="modal-contenido">
+                        <span class="cerrar">&times;</span> <!-- Botón para cerrar -->
+                        <div class="galeria">
+                            <img src="../media/perros/perro1/truan1.png" alt="Luna 1">
+                            <img src="../media/perros/perro1/truan2.png" alt="Luna 2">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botones de acción -->
                 <div class="botones">
-                    <a href="../pages_lightMode/adopta.html" class="boton" onclick="abrirPopupAdopcion(); return false;">Adoptar</a>
+                    <a href="../pages/contacto.html" class="boton">Adoptar</a>
+                    <a href="" class="boton">Apadrina</a>
                 </div>
             </div>
-
             <div class="tarjeta">
                 <div class="imagen-container">
-                    <img src="../media/perros/max.jpg" alt="Max">
-                    <p class="descripcion">Max - 3 años - Fiel y protector.</p>
+                    <img src="../media/perros/perro1/truan1.png" alt="Luna" class="imagen-perro">
+                    <p class="descripcion">Truán - Galgo adulto super sociable</p>
                 </div>
-            </div>
 
-            <div class="tarjeta">
-                <div class="imagen-container">
-                    <img src="../media/perros/bella.jpg" alt="Bella">
-                    <p class="descripcion">Bella - 1 año - Energética y amigable.</p>
+                <!-- MODAL (Galería de imágenes del perro) -->
+                <div class="modal" id="modal-luna">
+                    <div class="modal-contenido">
+                        <span class="cerrar">&times;</span> <!-- Botón para cerrar -->
+                        <div class="galeria">
+                            <img src="../media/perros/perro1/truan1.png" alt="Luna 1">
+                            <img src="../media/perros/perro1/truan2.png" alt="Luna 2">
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="tarjeta">
-                <div class="imagen-container">
-                    <img src="../media/perros/simba.jpg" alt="Simba">
-                    <p class="descripcion">Simba - 4 años - Tranquilo y sociable.</p>
+                <!-- Botones de acción -->
+                <div class="botones">
+                    <a href="../pages_lightMode/adopta.html" class="boton">Adoptar</a>
+                    <a href="../pages_lightMode/apadrina.html" class="boton">Apadrina</a>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <!-- SCRIPTS -->
     <script src="../misc/base.js"></script>
-    <script src="../scripts/donacion.js"></script>
+    <script src="../js/donacion.js"></script>
+    <script src="../js/peludos.js"></script>
 
     <!-- FOOTER -->
     <footer>

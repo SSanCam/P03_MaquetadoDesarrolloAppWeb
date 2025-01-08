@@ -380,16 +380,18 @@ footer {
     background-color: #8BC24A;
 }
 
+
 /* ======================= */
-/* RESPONSIVE */
+/* RESPONSIVE (MÓVILES) */
 /* ======================= */
 
 @media screen and (max-width: 768px) {
-    .formulario {
-        width: 95%;
+    .adopciones {
+        flex-direction: column; /* Apila las tarjetas en móviles */
+        align-items: center;
     }
-    
-    input, select {
-        font-size: 1rem;
+
+    .tarjeta {
+        max-width: 90%; /* Para que no se vean demasiado grandes */
     }
 }
