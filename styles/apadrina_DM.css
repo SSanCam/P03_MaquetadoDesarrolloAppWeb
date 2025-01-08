@@ -1,0 +1,72 @@
+/* ======================= */
+/* FORMULARIO DE APADRINAMIENTO */
+/* ======================= */
+
+.formulario {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #63797F;
+    border-radius: 10px;
+}
+
+.formulario h2, .formulario h3 {
+    text-align: center;
+    color: #8BC24A; /* Verde claro */
+}
+
+.formulario div {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff; /* Texto en blanco */
+}
+
+input, select {
+    width: 100%; /* Ajuste correcto */
+    max-width: 500px; /* Limita el ancho máximo */
+    display: block;
+    padding: 8px;
+    margin: auto;
+    background-color: #ffffff; /* Fondo oscuro de los inputs */
+    color: #000000; 
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    display: block;
+    width: 100%;
+    max-width: 500px; /* Evita que sea más ancho */
+    margin: auto;
+    padding: 10px;
+    background-color: #8BC24A;
+    color: #63797F;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    background-color: #A5D6A7;
+}
+
+/* ======================= */
+/* RESPONSIVE */
+/* ======================= */
+
+@media screen and (max-width: 768px) {
+    .formulario {
+        width: 95%;
+    }
+
+    input, select, button {
+        max-width: 100%; /* En pantallas pequeñas ocupa todo el ancho */
+    }
+}

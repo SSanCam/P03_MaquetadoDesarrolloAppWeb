@@ -1,0 +1,144 @@
+/* ======================= */
+/* FUENTES PERSONALIZADAS */
+/* ======================= */
+@font-face {
+    font-family: 'Lemon Juice';
+    src: url('../fonts/LemonJuice.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand_Light';
+    src: url('../fonts/Quicksand_Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand_Bold';
+    src: url('../fonts/Quicksand_Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* ======================= */
+/* ESTILOS GENERALES */
+/* ======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../media/images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    color: #000000;
+    font-family: 'Quicksand Light', Arial, sans-serif;
+}
+
+/* ======================= */
+/* CONTENEDOR GENERAL */
+/* ======================= */
+.contenedor-general {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;  /* Asegura que los elementos estén en columna */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px; /* Añade espacio entre los elementos */
+}
+
+
+/* ======================= */
+/* ESTILOS DEL TEXTO */
+/* ======================= */
+.contenedor-texto {
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* ======================= */
+/* TIPOGRAFÍA Y TEXTOS */
+/* ======================= */
+h1 {
+    font-family: 'Quicksand_Bold', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Quicksand_Light', sans-serif;
+    font-size: 1rem;
+    color: #33691D;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+p {
+    font-family: 'Quicksand_Bold', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+strong, b {
+    font-family: 'Quicksand Bold', sans-serif;
+    font-weight: 700;
+}
+
+/* ======================= */
+/* BOTÓN ESTILOS */
+/* ======================= */
+.boton-entrar {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #8BC24A; /* Color de fondo */
+    color: white;
+    border: none; /* Elimina el borde negro */
+    border-radius: 15px;
+    padding: 15px 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer; /* Hace que el cursor sea tipo botón */
+    transition: background-color 0.3s ease;
+}
+
+
+.boton-entrar:hover {
+    background-color: #33691D; /* Cambio de color al pasar el mouse */
+}
+
+/* ======================= */
+/* MEDIA QUERIES - RESPONSIVE */
+/* ======================= */
+@media (max-width: 768px) {
+    .contenedor-texto {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}

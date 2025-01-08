@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugio Kimba - Principal</title>
+    <link rel="stylesheet" href="../styles/principal_darkMode.css">
+    <link rel="stylesheet" href="../styles/dona.css">
+    <link rel="stylesheet" href="../misc/base_DM.css">
+</head>
+
+<body>
+    <div id="popup-donacion" class="popup">
+        <div class="popup-content">
+            <h2>Donación</h2>
+
+            <!-- Formulario de donación -->
+            <form id="form-donacion" onsubmit="procesarDonacion(event)">
+                <label for="titular">Nombre del titular:</label>
+                <input type="text" id="titular" name="titular" required>
+
+                <label for="tarjeta">Número de tarjeta:</label>
+                <input type="text" id="tarjeta" name="tarjeta" maxlength="16" pattern="\d{16}" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" maxlength="3" pattern="\d{3}" required>
+
+                <label for="cantidad">Cantidad a donar (€):</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+                <button type="submit">Donar</button>
+                <button type="button" onclick="cerrarPopupDonacion()">Cancelar</button>
+            </form>
+
+            <!-- Mensaje de confirmación (inicialmente oculto) -->
+            <div id="mensaje-confirmacion" style="display: none;">
+                <p>Donación realizada con éxito. ¡Gracias por tu apoyo!</p>
+                <button onclick="cerrarPopupDonacion()">Aceptar</button>
+            </div>
+        </div>
+    </div>
+    <!-- HEADER -->
+    <header>
+        <div class="container-header">
+            <div class="header-left-space"></div> <!-- Espacio vacío para centrar el menú -->
+
+            <div class="header-left">
+                <a href="../pages_darkMode/principal_DM.html">
+                    <img src="../media/iconos/icono_logo.png" alt="Logo Refugio Kimba" class="logo">
+                </a>
+            </div>
+
+            <nav class="header-center">
+                <a href="../pages_darkMode/sobrenosotros_DM.html" class="nav-link">Sobre nosotros</a>
+
+                <div class="dropdown">
+                    <a class="nav-link">Adopta</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../pages_darkMode/adopta_perro_DM.html">🐶 Perros</a></li>
+                        <li><a href="../pages_darkMode/adopta_gato_DM.html">🐱 Gatos</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <a class="nav-link">Ayúdales</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../pages_darkMode/acoge_DM.html">🏠 Acoge</a></li>
+                        <li><a href="#" onclick="abrirPopupDonacion(); return false;">💰 Dona</a></li>
+                        <li><a href="../pages_darkMode/apadrina_DM.html">❤️ Apadrina</a></li>
+                    </ul>
+                </div>
+
+                <a href="../pages_darkMode/contacto_DM.html" class="nav-link">Contacta</a>
+                <a href="../pages_darkMode/construccion_DM.html" class="nav-link">Tienda</a>
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="icon"><img src="../media/iconos/lupa.png" alt="Buscar"></a>
+                <a href="../pages_lightMode/principal.html" class="icon toggle-darkmode"><img src="../media/iconos/sol.png" alt="Modo oscuro"></a>
+                <a href="perfil.html" class="icon"><img src="../media/iconos/perfil_LM.png" alt="Perfil"></a>
+            </div>
+
+            <div class="header-right-space"></div> <!-- Espacio vacío para equilibrar -->
+        </div>
+    </header>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container-main">
+        <div class="contenedor-superior">
+            <div class="container-texto">
+                <h2>SOCIEDAD PROTECTORA DE ANIMALES</h2>
+                <br>
+                <h1>Adopta un Amigo</h1>
+                <p>Dentro de los muchos trabajos que se realizan en una protectora de animales, está el encontrar
+                    familias responsables a todos y cada uno de los animales que llegan a nuestras instalaciones. Para
+                    ello es necesaria una exhaustiva dedicación de todas las personas que conviven a diario con ellos,
+                    de manera que se pueda ofrecer a los posibles adoptantes una información detallada del carácter del
+                    mismo, así como todo lo que pueda resultar decisivo a la hora de pensar si queremos o podemos
+                    hacernos cargo de esa vida.
+                    Teniendo en cuenta que un perro o un gato puede llegar a vivir una media de quince años, todo lo que
+                    nos conduzca a tomar la decisión correcta, siempre será importante.
+                    Hay que estar totalmente seguro/a que podrás hacerte cargo de él, durante toda su vida.</p>
+            </div>
+            <div class="container-imagen">
+                <img src="../media/images/bodeguero.png" alt="Imagen de un perro de raza Bodeguero">
+            </div>
+            <div class="tablon"></div>
+            <div class="parte-inferior">
+                <div class="adoptados">
+                    <h1>🐾 Adoptados 🐾</h1>
+                </div>
+
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <img src="../media/adoptados/adopcion3.png" alt="Perro adoptado">
+                        <img src="../media/adoptados/adopcion5.png" alt="Gato adoptado">
+                        <img src="../media/adoptados/adopcion6.png" alt="Perro adoptado">
+                        <img src="../media/adoptados/adopcion1.png" alt="Perro adoptado">
+                        <img src="../media/adoptados/adopcion4.png" alt="Perro adoptado">
+                        <img src="../media/adoptados/adopcion2.png" alt="Perro adoptado">
+                        <!--  Triplicamos las entradas existentes para una representación más real  -->
+                        <img src="../media/adoptados/adopcion3.png" alt="Perro adoptado">
+                        <img src="../media/adoptados/adopcion5.png" alt="Gato adoptado">
+                        <img src="../media/adoptados/adopcion6.png" alt="Perro adoptado">
+                        <img src="../media/adoptados/adopcion1.png" alt="Perro adoptado">
+                        <img src="../media/adoptados/adopcion4.png" alt="Perro adoptado">
+                        <img src="../media/adoptados/adopcion2.png" alt="Perro adoptado">
+                        <img src="../media/adoptados/adopcion3.png" alt="Perro adoptado">
+                        <img src="../media/adoptados/adopcion5.png" alt="Gato adoptado">
+                        <img src="../media/adoptados/adopcion6.png" alt="Perro adoptado">
+                        <img src="../media/adoptados/adopcion1.png" alt="Perro adoptado">
+                        <img src="../media/adoptados/adopcion4.png" alt="Perro adoptado">
+                        <img src="../media/adoptados/adopcion2.png" alt="Perro adoptado">
+                    </div>
+                </div>
+            </div>
+
+            <div class="tablon"></div>
+
+            <div class="entidad-texto">
+                <h1>🤝Entidades colaboradoras</h1>
+            </div>
+
+            <div class="entidades">
+                <a href="https://www.podencoworld.nl" target="_blank" rel="noopener noreferrer">
+                    <img src="../media/entidades_colaboradoras/podenco_world.png" alt="Podenco World">
+                </a>
+                <a href="https://aspa-ev.de" target="_blank" rel="noopener noreferrer">
+                    <img src="../media/entidades_colaboradoras/ASPA.png" alt="ASPA">
+                </a>
+                <a href="https://www.bodeguero-in-not.de" target="_blank" rel="noopener noreferrer">
+                    <img src="../media/entidades_colaboradoras/bodeguero_in_not.png" alt="ASPA">
+                </a>
+                <a href="https://www.instagram.com/pet_mail/?hl=es" target="_blank" rel="noopener noreferrer">
+                    <img src="../media/entidades_colaboradoras/PET_MAIL.png" alt="ASPA">
+                </a>
+            </div>
+            
+
+
+
+        </div>
+        <script src="../js/carousel-imagen.js"></script>
+        <script src="../js/donacion.js"></script>
+    </main>
+
+</body>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container-footer">
+            <p>Diseñado: Plaza el Cuartel, 177, 11930, Chiclana (Cádiz) Lunes - Viernes 9:00-15:00</p>
+            <nav>
+                <a href="../pages_darkMode/error_404_DM.html">Términos y Condiciones</a> |
+                <a href="../pages_darkMode/error_404_DM.html">Política de Privacidad</a> |
+                <a href="../pages_darkMode/error_404_DM.html">Acceso Legal</a> |
+                <a href="../pages_darkMode/error_404_DM.html">Política de Cookies</a>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/refugiokimba.org/?locale=es_ES" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="../media/iconos/logo-facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/refugio_kimba/" target="_blank" rel="noopener noreferrer">
+                    <img src="../media/iconos/logo-instagram.svg" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+</html>

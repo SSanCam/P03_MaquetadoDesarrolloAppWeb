@@ -1,0 +1,386 @@
+/* ======================= */
+/* DARK MODE */
+/* ======================= */
+
+
+/* ======================= */
+/* FUENTES */
+/* ======================= */
+
+@font-face {
+    font-family: 'Lemon Juice';
+    src: url('../fonts/LemonJuice.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand_Light';
+    src: url('../fonts/Quicksand_Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand_Bold';
+    src: url('../fonts/Quicksand_Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* ======================= */
+/* ESTILOS GENERALES */
+/* ======================= */
+
+html, body {
+    min-height: 100vh;
+    height: auto;
+    overflow-x: hidden;
+    background-color: #233746;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', Arial, sans-serif;
+    background-color: #233746;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Lemon Juice', Arial, sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+h2 {
+    font-family: 'Quicksand_Bold', Arial, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+p {
+    font-family: 'Quicksand_Light', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: justify;
+    color: #ffffff;
+
+}
+
+/* ======================= */
+/* HEADER */
+/* ======================= */
+
+header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 10vh; /* Cambiado a height para adaptabilidad */
+    min-height: 10vh; /* Cambiado a min-height para adaptabilidad */
+    background-color: #63797F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container-header {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left-space, .header-right-space {
+    flex: 1;
+}
+
+/* Contenedor del logo */
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Se adapta al tamaño del header */
+}
+
+/* Fondo redondeado del logo */
+.header-left a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8vh; /* Proporcional al header de 10vh */
+    height: 8vh; /* Mantiene el fondo circular */
+    background-color: #233746; /* Fondo blanco */
+    border-radius: 50%; /* Hace el fondo redondo */
+}
+
+/* Imagen del logo sin deformación */
+.logo {
+    height: 6vh; /* Ajustado proporcionalmente */
+    width: auto; /* Mantiene la proporción */
+}
+
+.header-center {
+    flex-grow: 2;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    background-color: #33691D;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link:hover {
+    background-color: #D29F68;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #8BC24A;
+    border-radius: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+    min-width: 150px;
+    z-index: 100;
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #33691D;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    flex: 0 0 auto;
+}
+
+.icon img {
+    height: 50px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.icon img:hover {
+    transform: scale(1.2);
+}
+
+/* ======================= */
+/* MAIN */
+/* ======================= */
+
+.container-main {
+    padding-top: 12vh; 
+    padding-bottom: 12vh;
+}
+
+/* ======================= */
+/* FOOTER */
+/* ======================= */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: 10vh; /* Cambiado a min-height */
+    background-color: #D29F68;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #33691D;
+    padding: 10px 0;
+    font-size: 1.3rem;
+    z-index: 999;
+}
+
+.container-footer {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.container-footer nav a {
+    color: #33691D;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.container-footer nav a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a img {
+    height: 35px; /* Ajustado para pantallas pequeñas */
+    margin-right: 10px;
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.4);
+}
+
+/* ======================= */
+/* RESPONSIVE */
+/* ======================= */
+
+@media screen and (max-width: 768px) {
+    .container-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-center {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    footer {
+        min-height: 12vh; /* Incrementa la altura en pantallas pequeñas */
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .container-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-icons img {
+        height: 30px;
+    }
+}
+
+
+/* Estilos generales del popup de donación */
+.popup {
+    display: none;  /* ⬅ OCULTAR POR DEFECTO */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex; /* Asegurar que solo se active con JS */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido del popup */
+.popup-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+}
+
+
+.popup-content h2 {
+    color: #33691D;
+}
+
+.popup-content label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.popup-content input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup-content button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background-color: #33691D;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.popup-content button:hover {
+    background-color: #8BC24A;
+}
+
+/* ======================= */
+/* RESPONSIVE */
+/* ======================= */
+
+@media screen and (max-width: 768px) {
+    .formulario {
+        width: 95%;
+    }
+    
+    input, select {
+        font-size: 1rem;
+    }
+}

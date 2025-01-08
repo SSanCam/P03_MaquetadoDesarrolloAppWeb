@@ -1,0 +1,157 @@
+/* ======================= */
+/* ESTILOS PARA EL CONTENIDO PRINCIPAL */
+/* ======================= */
+
+.contenedor-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permitir ajuste en pantallas pequeñas */
+    padding: 40px 5%;
+    margin-bottom: 50px;
+}
+
+.container-texto {
+    width: 50%; /* Asegura que el texto y la imagen estén en paralelo */
+    padding: 20px;
+    font-family: 'Quicksand', Arial, sans-serif;
+    text-align: justify;
+}
+
+.container-imagen {
+    width: 50%;
+}
+
+.container-imagen img {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ======================= */
+/* SEPARADOR VISUAL */
+/* ======================= */
+
+.tablon {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-image: url("../media/images/tablon.jpg"); /* Asegura que la ruta es correcta */
+    background-size: cover; /* Usa cover para que se ajuste sin distorsionar */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1300px; /* Incrementamos el ancho */
+    max-width: 1300px; /* Aumentamos el tamaño máximo */
+    height: 50px;
+}
+
+
+/* Adoptados */
+.adoptados {
+    margin: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px; /* Espacio entre el título y el carrusel */
+    margin-left: 20%
+}
+
+.entidad-texto {
+    margin: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px; /* Espacio entre el título y el carrusel */
+    margin-left: 0%
+}
+/*Entidades*/
+.entidades {
+    display: flex; /* Activa flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 20px; /* Espaciado entre imágenes */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en pantallas pequeñas */
+    margin: 30px auto; /* Centra el contenedor en la página */
+    width: 90%; /* Ajusta el ancho para evitar que se expandan demasiado */
+    max-width: 1200px; /* Limita el ancho en pantallas grandes */
+}
+
+/* Carousel de imagenes*/
+.carousel-container {
+    width: 80%;
+    max-width: 900px;
+    overflow: hidden; /* Oculta las imágenes que están fuera del contenedor */
+    margin: 40px auto;
+    position: relative;
+    margin-left: 35%
+
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Transición suave */
+    gap: 20px; /* Espacio entre imágenes */
+}
+
+.carousel-track img {
+    width: 60%; /* Mantiene tres imágenes visibles */
+    border-radius: 15px;
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+
+
+
+/* ======================= */
+/* RESPONSIVE */
+/* ======================= */
+@media (max-width: 768px) {
+    .contenedor-superior {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container-texto, .container-imagen {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container-imagen img {
+        width: 80%;
+    }
+
+    .tablon {
+        width: 95%;
+        height: 40px;
+    }
+}
+
+/* ======================= */
+/* RESPONSIVE */
+/* ======================= */
+
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container-texto, 
+    .container-imagen {
+        width: 100%;
+    }
+
+    .container-texto h1 {
+        font-size: 2.5rem;
+    }
+
+    .container-texto p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,110 @@
+/* ======================= */
+/* ESTILOS 404 */
+/* ======================= */
+
+body {
+    background: url('../media/images/construccion_DM.png') no-repeat center center fixed;
+    background-size: 50%; /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
+    height: 100vh; /* Asegura que el fondo ocupe toda la altura de la ventana */
+    margin: 0;
+    background-color: #63797F;
+}
+
+/* Fondo de la imagen dentro del div */
+.background-image {
+    position: absolute;
+    top: 50%;  /* Centrar verticalmente */
+    left: 50%;  /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar al centro */
+    width: 100%;
+    max-width: 600px;  /* Tamaño controlado */
+    height: auto;
+    background-image: url("../media/images/construccion.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2; /* Opacidad del 50% */
+    z-index: -1; /* Se coloca detrás del contenido */
+}
+
+/* Contenedor principal */
+.contenedor-global {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Contenedor del mensaje */
+.message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Texto de error */
+.texto-error h1 {
+    font-family: 'Lemon Juice', Arial, sans-serif;
+    font-size: 5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Texto complementario */
+.texto-complementario p {
+    font-family: 'Quicksand_Bold', Arial, sans-serif;
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #ffffff;
+}
+
+/* Huella enlazada a la página principal */
+.paw-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.paw-logo img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.paw-logo img:hover {
+    transform: scale(1.2);
+}
+
+
+@font-face {
+    font-family: 'Lemon Juice';
+    src: url('../fonts/LemonJuice.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand_Light';
+    src: url('../fonts/Quicksand_Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand_Bold';
+    src: url('../fonts/Quicksand_Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}

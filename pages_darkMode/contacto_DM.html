@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugio Kimba - Contacta
+    </title>
+    <link rel="stylesheet" href="../misc/base.css">
+    <link rel="stylesheet" href="../styles/contacto.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container-header">
+            <div class="header-left-space"></div> <!-- Espacio vacío para centrar el menú -->
+
+            <div class="header-left">
+                <a href="../pages_lightMode/principal.html">
+                    <img src="../media/iconos/icono_logo.png" alt="Logo Refugio Kimba" class="logo">
+                </a>
+            </div>
+
+            <nav class="header-center">
+                <a href="../pages_lightMode/sobre_nosotros.html" class="nav-link">Sobre nosotros</a>
+
+                <div class="dropdown">
+                    <a class="nav-link">Adopta</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../pages_lightMode/adopta_perro.html">🐶 Perros</a></li>
+                        <li><a href="../pages_lightMode/adopta_gato.html">🐱 Gatos</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <a class="nav-link">Ayúdales</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../pages_lightMode/acoge.html">🏠 Acoge</a></li>
+                        <li><a href="../pages_lightMode/dona.html">💰 Dona</a></li>
+                        <li><a href="../pages_lightMode/apadrina.html">❤️ Apadrina</a></li>
+                    </ul>
+                </div>
+
+                <a href="../pages_lightMode/contacto.html" class="nav-link">Contacta</a>
+                <a href="../pages_lightMode/construccion.html" class="nav-link">Tienda</a>
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="icon"><img src="../media/iconos/lupa.png" alt="Buscar"></a>
+                <a href="#" class="icon toggle-darkmode"><img src="../media/iconos/luna.png" alt="Modo oscuro"></a>
+                <a href="perfil.html" class="icon"><img src="../media/iconos/perfil_LM.png" alt="Perfil"></a>
+            </div>
+
+            <div class="header-right-space"></div> <!-- Espacio vacío para equilibrar -->
+        </div>
+    </header>
+
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container-main">
+        <h1>📞 Contacto</h1>
+
+        <section class="formulario-contacto">
+            <form action="#" method="POST">
+                <h2>Formulario de Contacto</h2>
+
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefono">Teléfono de contacto</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="../misc/base.js"></script>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container-footer">
+            <p>Diseñado: Plaza el Cuartel, 177, 11930, Chiclana (Cádiz) Lunes - Viernes 9:00-15:00</p>
+            <nav>
+                <a href="../pages_lightMode/error_404.html">Términos y Condiciones</a> |
+                <a href="../pages_lightMode/error_404.html">Política de Privacidad</a> |
+                <a href="../pages_lightMode/error_404.html">Acceso Legal</a> |
+                <a href="../pages_lightMode/error_404.html">Política de Cookies</a>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/refugiokimba.org/?locale=es_ES" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="../media/iconos/logo-facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/refugio_kimba/" target="_blank" rel="noopener noreferrer">
+                    <img src="../media/iconos/logo-instagram.svg" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

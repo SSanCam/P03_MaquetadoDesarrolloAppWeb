@@ -1,0 +1,84 @@
+/* ======================= */
+/* ESTILOS GENERALES */
+/* ======================= */
+
+body {
+    font-family: 'Quicksand', Arial, sans-serif;
+    background-color: #ffffff;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ======================= */
+/* MAIN */
+/* ======================= */
+
+.container-main {
+    padding-top: 12vh; /* Evita solapamiento con el header */
+    padding-bottom: 12vh;
+    min-height: 100vh;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Ajuste de párrafos */
+.texto1, .texto2 {
+    margin-bottom: 20px;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.logo-original {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-image: url("../media/images/logo_original.jpeg"); /* Asegura que la ruta es correcta */
+    background-size: cover; /* Usa cover para que se ajuste sin distorsionar */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px; /* Incrementamos el ancho */
+    max-width: 200px; /* Aumentamos el tamaño máximo */
+    height: 200px;
+}
+
+.logo-actual {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-image: url("../media/images/logo-actual.jpeg"); /* Asegura que la ruta es correcta */
+    background-size: cover; /* Usa cover para que se ajuste sin distorsionar */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 250px; /* Incrementamos el ancho */
+    max-width: 250px; /* Aumentamos el tamaño máximo */
+    height: 200px;
+}
+/* ======================= */
+/* VOLUNTARIOS */
+/* ======================= */
+
+.voluntarios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.voluntarios img {
+    width: 45%; /* Ajuste de tamaño */
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* ======================= */
+/* RESPONSIVE */
+/* ======================= */
+
+@media screen and (max-width: 768px) {
+    .voluntarios img {
+        width: 80%;
+    }
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugio Kimba - Sobre Nosotros</title>
+    <link rel="stylesheet" href="../styles/dona.css">
+    <link rel="stylesheet" href="../misc/base_DM.css">
+    <link rel="stylesheet" href="../styles/sobre_nosotros_darkMode.css">
+</head>
+
+<body>
+
+    <div id="popup-donacion" class="popup">
+        <div class="popup-content">
+            <h2>Donación</h2>
+
+            <!-- Formulario de donación -->
+            <form id="form-donacion" onsubmit="procesarDonacion(event)">
+                <label for="titular">Nombre del titular:</label>
+                <input type="text" id="titular" name="titular" required>
+
+                <label for="tarjeta">Número de tarjeta:</label>
+                <input type="text" id="tarjeta" name="tarjeta" maxlength="16" pattern="\d{16}" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" maxlength="3" pattern="\d{3}" required>
+
+                <label for="cantidad">Cantidad a donar (€):</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+                <button type="submit">Donar</button>
+                <button type="button" onclick="cerrarPopupDonacion()">Cancelar</button>
+            </form>
+
+            <!-- Mensaje de confirmación (inicialmente oculto) -->
+            <div id="mensaje-confirmacion" style="display: none;">
+                <p>Donación realizada con éxito. ¡Gracias por tu apoyo!</p>
+                <button onclick="cerrarPopupDonacion()">Aceptar</button>
+            </div>
+        </div>
+    </div>
+    <!-- HEADER -->
+    <header>
+        <div class="container-header">
+            <div class="header-left-space"></div> <!-- Espacio vacío para centrar el menú -->
+
+            <div class="header-left">
+                <a href="../pages_darkMode/principal_DM.html">
+                    <img src="../media/iconos/icono_logo.png" alt="Logo Refugio Kimba" class="logo">
+                </a>
+            </div>
+
+            <nav class="header-center">
+                <a href="../pages_darkMode/sobrenosotros_DM.html" class="nav-link">Sobre nosotros</a>
+
+                <div class="dropdown">
+                    <a class="nav-link">Adopta</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../pages_darkMode/adopta_perro_DM.html">🐶 Perros</a></li>
+                        <li><a href="../pages_darkMode/adopta_gato_DM.html">🐱 Gatos</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <a class="nav-link">Ayúdales</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../pages_darkMode/acoge_DM.html">🏠 Acoge</a></li>
+                        <li><a href="#" onclick="abrirPopupDonacion(); return false;">💰 Dona</a></li>
+                        <li><a href="../pages_darkMode/apadrina_DM.html">❤️ Apadrina</a></li>
+                    </ul>
+                </div>
+
+                <a href="../pages_darkMode/contacto_DM.html" class="nav-link">Contacta</a>
+                <a href="../pages_darkMode/construccion_DM.html" class="nav-link">Tienda</a>
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="icon"><img src="../media/iconos/lupa.png" alt="Buscar"></a>
+                <a href="../pages_lightMode/sobre_nosotros.html" class="icon toggle-darkmode"><img src="../media/iconos/sol.png" alt="Modo oscuro"></a>
+                <a href="perfil.html" class="icon"><img src="../media/iconos/perfil_LM.png" alt="Perfil"></a>
+            </div>
+
+            <div class="header-right-space"></div> <!-- Espacio vacío para equilibrar -->
+        </div>
+    </header>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container-main">
+        <div class="logo-original"></div>
+        <div class="texto1">
+            <p>
+                La Sociedad Protectora de Animales y Plantas de Cádiz, más conocida como “Refugio Kimba”, se fundó en el
+                año 1872, siendo la Protectora de Animales más antigua de España.
+                <br>Aunque en sus orígenes su objetivo principal fue la protección de las plantas, en 1966 se creó el
+                refugio para albergar a los animales abandonados.
+                <br>Desde entonces, la labor de esta Protectora ha evolucionado, pero siempre con el mismo propósito: la
+                defensa y protección de los animales.
+            </p>
+        </div>
+        <div class="logo-actual"></div>
+        <div class="texto2">
+            <p>
+                El Refugio Kimba es una asociación sin ánimo de lucro dedicada a la protección y defensa de los
+                animales.
+                Nuestro principal objetivo es el rescate de animales abandonados y maltratados, así como la
+                concienciación de la sociedad sobre la importancia de la adopción y la tenencia responsable de mascotas.
+                <br>
+                <br>
+                Desde 2010, hemos rescatado y dado en adopción a cientos de animales en situación de abandono.
+                Nuestro equipo de voluntarios trabaja cada día para garantizar el bienestar de los animales acogidos en
+                nuestras instalaciones, proporcionándoles los cuidados necesarios y buscando para ellos un hogar
+                definitivo.
+                <br>Además, realizamos campañas de concienciación y sensibilización sobre la protección animal, así como
+                campañas de reocgida de materiales, comida, artículos de necesidad tanto para el refugio como para los
+                propios animales.
+            </p>
+        </div>
+
+        <div class="voluntarios">
+            <img src="../media/voluntariado/voluntaria1.png" alt="Voluntaria con perros">
+            <img src="../media/voluntariado/campania_reocgida.png" alt="Voluntarios en campaña de recolección">
+            <img src="../media/voluntariado/charla_colegios.png" alt="Voluntarios en campaña de recolección">
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="container-footer">
+            <p>Diseñado: Plaza el Cuartel, 177, 11930, Chiclana (Cádiz) Lunes - Viernes 9:00-15:00</p>
+            <nav>
+                <a href="../pages_darkMode/construccion_DM.html">Términos y Condiciones</a> |
+                <a href="../pages_darkMode/construccion_DM.html">Política de Privacidad</a> |
+                <a href="../pages_darkMode/construccion_DM.html">Acceso Legal</a> |
+                <a href="../pages_darkMode/construccion_DM.html">Política de Cookies</a>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/refugiokimba.org/?locale=es_ES" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="../media/iconos/logo-facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/refugio_kimba/" target="_blank" rel="noopener noreferrer">
+                    <img src="../media/iconos/logo-instagram.svg" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/donacion.js"></script>
+    <script src="../misc/base.js"></script>
+</body>
+
+</html>

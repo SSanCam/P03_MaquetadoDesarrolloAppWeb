@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugio Kimba -
+        <base href="">
+    </title>
+    <link rel="stylesheet" href="../styles/dona.css">
+    <link rel="stylesheet" href="../misc/base_DM.css">
+    <link rel="stylesheet" href="../styles/acoge_DM.css">
+
+</head>
+
+<body>
+
+    <div id="popup-donacion" class="popup">
+        <div class="popup-content">
+            <h2>Donación</h2>
+
+            <!-- Formulario de donación -->
+            <form id="form-donacion" onsubmit="procesarDonacion(event)">
+                <label for="titular">Nombre del titular:</label>
+                <input type="text" id="titular" name="titular" required>
+
+                <label for="tarjeta">Número de tarjeta:</label>
+                <input type="text" id="tarjeta" name="tarjeta" maxlength="16" pattern="\d{16}" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" maxlength="3" pattern="\d{3}" required>
+
+                <label for="cantidad">Cantidad a donar (€):</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+                <button type="submit">Donar</button>
+                <button type="button" onclick="cerrarPopupDonacion()">Cancelar</button>
+            </form>
+
+            <!-- Mensaje de confirmación (inicialmente oculto) -->
+            <div id="mensaje-confirmacion" style="display: none;">
+                <p>Donación realizada con éxito. ¡Gracias por tu apoyo!</p>
+                <button onclick="cerrarPopupDonacion()">Aceptar</button>
+            </div>
+        </div>
+    </div>
+    <!-- HEADER -->
+    <header>
+        <div class="container-header">
+            <div class="header-left-space"></div> <!-- Espacio vacío para centrar el menú -->
+
+            <div class="header-left">
+                <a href="../pages_darkMode/principal_DM.html">
+                    <img src="../media/iconos/icono_logo.png" alt="Logo Refugio Kimba" class="logo">
+                </a>
+            </div>
+
+            <nav class="header-center">
+                <a href="../pages_darkMode/sobrenosotros_DM.html" class="nav-link">Sobre nosotros</a>
+
+                <div class="dropdown">
+                    <a class="nav-link">Adopta</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../pages_darkMode/adopta_perro_DM.html">🐶 Perros</a></li>
+                        <li><a href="../pages_darkMode/adopta_gato_DM.html">🐱 Gatos</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <a class="nav-link">Ayúdales</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../pages_darkMode/acoge_DM.html">🏠 Acoge</a></li>
+                        <li><a href="#" onclick="abrirPopupDonacion(); return false;">💰 Dona</a></li>
+                        <li><a href="../pages_darkMode/apadrina_DM.html">❤️ Apadrina</a></li>
+                    </ul>
+                </div>
+
+                <a href="../pages_darkMode/contacto_DM.html" class="nav-link">Contacta</a>
+                <a href="../pages_darkMode/construccion_DM.html" class="nav-link">Tienda</a>
+            </nav>
+
+            <div class="header-right">
+                <a href="#" class="icon"><img src="../media/iconos/lupa.png" alt="Buscar"></a>
+                <a href="../pages_lightMode/acoge.html" class="icon toggle-darkmode"><img src="../media/iconos/sol.png"
+                        alt="Modo oscuro"></a>
+                <a href="perfil.html" class="icon"><img src="../media/iconos/perfil_LM.png" alt="Perfil"></a>
+            </div>
+
+            <div class="header-right-space"></div> <!-- Espacio vacío para equilibrar -->
+        </div>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container-main">
+        <!-- Aquí se insertará el contenido de cada página -->
+        <h1>Acoge 🏡</h1>
+        <section>
+            <article class="formulario">
+                <h2>Formulario de Acogida</h2>
+                <form action="procesar_acogida.php" method="POST">
+                    <!-- Datos personales -->
+                    <div>
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div>
+                        <label for="dni">DNI/NIE</label>
+                        <input type="text" id="dni" name="dni" required>
+                    </div>
+                    <div>
+                        <label for="fecha_nacimiento">Fecha de nacimiento</label>
+                        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                    </div>
+                    <div>
+                        <label for="direccion">Dirección completa</label>
+                        <input type="text" id="direccion" name="direccion" required>
+                    </div>
+                    <div>
+                        <label for="telefono">Teléfono de contacto</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div>
+                        <label for="email">Correo electrónico (opcional)</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+
+                    <!-- Información sobre acogida -->
+                    <h3>Información sobre la acogida</h3>
+                    <div>
+                        <label>¿Qué tipo de animal puedes acoger?</label><br>
+                        <input type="checkbox" id="perro" name="tipo_animal[]" value="perro">
+                        <label for="perro">🐶 Perro</label>
+
+                        <input type="checkbox" id="gato" name="tipo_animal[]" value="gato">
+                        <label for="gato">🐱 Gato</label>
+
+                    </div>
+                    <div>
+                        <label>¿Tienes otros animales en casa?</label><br>
+                        <input type="radio" id="otros_si" name="otros_animales" value="si" required>
+                        <label for="otros_si">Sí</label>
+
+                        <input type="radio" id="otros_no" name="otros_animales" value="no" required>
+                        <label for="otros_no">No</label>
+                    </div>
+                    <div>
+                        <label for="tipo_animales">Si tienes animales, ¿cuántos y de qué tipo?</label>
+                        <input type="text" id="tipo_animales" name="tipo_animales">
+                    </div>
+                    <div>
+                        <label>¿Puedes acoger cachorros?</label><br>
+                        <input type="radio" id="cachorros_si" name="cachorros" value="si" required>
+                        <label for="cachorros_si">Sí</label>
+
+                        <input type="radio" id="cachorros_no" name="cachorros" value="no" required>
+                        <label for="cachorros_no">No</label>
+                    </div>
+
+                    <!-- Disponibilidad -->
+                    <h3>Disponibilidad</h3>
+                    <div>
+                        <label for="fecha_inicio">¿Cuándo podrías empezar a acoger?</label>
+                        <input type="date" id="fecha_inicio" name="fecha_inicio" required>
+                    </div>
+                    <div>
+                        <label for="tiempo_acogida">¿Por cuánto tiempo podrías acoger al animal?</label>
+                        <select id="tiempo_acogida" name="tiempo_acogida" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="menos_1_mes">Menos de 1 mes</option>
+                            <option value="1_3_meses">1-3 meses</option>
+                            <option value="indefinido">Indefinido (hasta que encuentre hogar)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit">Enviar Solicitud</button>
+                </form>
+            </article>
+        </section>
+
+    </main>
+    <script src="../misc/base.js"></script>
+    <script src="../js/donacion.js"></script>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container-footer">
+            <p>Diseñado: Plaza el Cuartel, 177, 11930, Chiclana (Cádiz) Lunes - Viernes 9:00-15:00</p>
+            <nav>
+                <a href="../pages_darkMode/error_404_DM.html">Términos y Condiciones</a> |
+                <a href="../pages_darkMode/error_404_DM.html">Política de Privacidad</a> |
+                <a href="../pages_darkMode/error_404_DM.html">Acceso Legal</a> |
+                <a href="../pages_darkMode/error_404_DM.html">Política de Cookies</a>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/refugiokimba.org/?locale=es_ES" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="../media/iconos/logo-facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/refugio_kimba/" target="_blank" rel="noopener noreferrer">
+                    <img src="../media/iconos/logo-instagram.svg" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

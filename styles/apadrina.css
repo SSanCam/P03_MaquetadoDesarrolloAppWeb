@@ -1,0 +1,112 @@
+/* ======================= */
+/* FORMULARIO DE APADRINAMIENTO */
+/* ======================= */
+/* Asegurar que el contenido principal comience 12vh por debajo del header */
+
+/* Ajustar la posición del formulario */
+.formulario {
+    margin-top: 10px; /* Ajusta el margen superior para una mejor distribución */
+}
+
+
+.formulario h2, .formulario h3 {
+    text-align: center;
+    color: #33691D;
+}
+
+.formulario div {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #33691D;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    background-color: #8BC24A;
+}
+
+/* ======================= */
+/* POPUP DE CONFIRMACIÓN */
+/* ======================= */
+
+.popup {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+}
+
+.popup-content p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.popup-content button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #33691D;
+    color: #ffffff;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.popup-content button:hover {
+    background-color: #8BC24A;
+}
+
+/* ======================= */
+/* RESPONSIVE */
+/* ======================= */
+
+@media screen and (max-width: 768px) {
+    .formulario {
+        width: 95%;
+    }
+    
+    input, select {
+        font-size: 1rem;
+    }
+}
