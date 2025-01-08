@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refugio Kimba - Adopta un amigo</title>
-    <link rel="stylesheet" href="../styles/dona.css">
+    <title>Refugio Kimba - Adopta</title>
     <link rel="stylesheet" href="../misc/base.css">
-    <link rel="stylesheet" href="../styles/adopta_perro.css">
-
+    <link rel="stylesheet" href="../styles/dona.css">
+    <link rel="stylesheet" href="../styles/adopta.css">
+    
 </head>
 
 <body>
 
+    <!-- ✅ Ventana emergente de donación -->
     <div id="popup-donacion" class="popup">
         <div class="popup-content">
-            <h2>Donación</h2>
+            <h2>Adopta un amigo</h2>
 
             <!-- Formulario de donación -->
             <form id="form-donacion" onsubmit="procesarDonacion(event)">
@@ -80,7 +81,7 @@
 
             <div class="header-right">
                 <a href="#" class="icon"><img src="../media/iconos/lupa.png" alt="Buscar"></a>
-                <a href="#" class="icon toggle-darkmode"><img src="../media/iconos/luna.png" alt="Modo oscuro"></a>
+                <a href="../pages_darkMode/adopta_DM.html" class="icon toggle-darkmode"><img src="../media/iconos/luna.png" alt="Modo oscuro"></a>
                 <a href="perfil.html" class="icon"><img src="../media/iconos/perfil_LM.png" alt="Perfil"></a>
             </div>
 
@@ -90,45 +91,67 @@
 
     <!-- CONTENIDO PRINCIPAL -->
     <main class="container-main">
-        <h1>🐶 Perros en Adopción</h1>
+        <!-- Aquí se insertará el contenido de cada página -->
+        <h1>Adopta 🏡</h1>
+        <section>
+            <article class="formulario">
+                <h2>Formulario de Adopción</h2>
+                <form onsubmit="mostrarPopup(event)">
+                    <!-- Datos personales -->
+                    <div>
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div>
+                        <label for="dni">DNI/NIE</label>
+                        <input type="text" id="dni" name="dni" required>
+                    </div>
+                    <div>
+                        <label for="fecha_nacimiento">Fecha de nacimiento</label>
+                        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                    </div>
+                    <div>
+                        <label for="direccion">Dirección completa</label>
+                        <input type="text" id="direccion" name="direccion" required>
+                    </div>
+                    <div>
+                        <label for="telefono">Teléfono de contacto</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div>
+                        <label for="email">Correo electrónico (opcional)</label>
+                        <input type="email" id="email" name="email">
+                    </div>
 
-        <section class="grid-adopcion">
-            <div class="tarjeta">
-                <div class="imagen-container">
-                    <img src="../media/perros/perro1/truan1.png" alt="Luna">
-                    <p class="descripcion">Luna - 2 años - Juguetona y cariñosa.</p>
-                </div>
-                <div class="botones">
-                    <a href="../pages_lightMode/adopta.html" class="boton" onclick="abrirPopupAdopcion(); return false;">Adoptar</a>
-                </div>
-            </div>
+                    <div>
+                        <label>¿Tienes otros animales en casa?</label><br>
+                        <input type="radio" id="otros_si" name="otros_animales" value="si" required>
+                        <label for="otros_si">Sí</label>
 
-            <div class="tarjeta">
-                <div class="imagen-container">
-                    <img src="../media/perros/max.jpg" alt="Max">
-                    <p class="descripcion">Max - 3 años - Fiel y protector.</p>
-                </div>
-            </div>
+                        <input type="radio" id="otros_no" name="otros_animales" value="no" required>
+                        <label for="otros_no">No</label>
+                    </div>
+                    <div>
+                        <label for="tipo_animales">Si tienes animales, ¿cuántos y de qué tipo?</label>
+                        <input type="text" id="tipo_animales" name="tipo_animales">
+                    </div>
 
-            <div class="tarjeta">
-                <div class="imagen-container">
-                    <img src="../media/perros/bella.jpg" alt="Bella">
-                    <p class="descripcion">Bella - 1 año - Energética y amigable.</p>
-                </div>
-            </div>
-
-            <div class="tarjeta">
-                <div class="imagen-container">
-                    <img src="../media/perros/simba.jpg" alt="Simba">
-                    <p class="descripcion">Simba - 4 años - Tranquilo y sociable.</p>
-                </div>
-            </div>
+                    <button type="submit">Enviar Solicitud</button>
+                </form>
+            </article>
         </section>
-    </main>
+        <!-- Ventana emergente de confirmación -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <p>Formulario enviado con éxito.</p>
+                <button onclick="cerrarPopup()">Aceptar</button>
+            </div>
+        </div>
 
-    <!-- SCRIPTS -->
+    </main>
     <script src="../misc/base.js"></script>
-    <script src="../scripts/donacion.js"></script>
+    <script src="../js/popup_formularios.js"></script>
+    <script src="../js/donacion.js"></script>
 
     <!-- FOOTER -->
     <footer>
@@ -141,10 +164,11 @@
                 <a href="../pages_lightMode/error_404.html">Política de Cookies</a>
             </nav>
             <div class="social-icons">
-                <a href="https://www.facebook.com/refugiokimba.org/?locale=es_ES" target="_blank">
+                <a href="https://www.facebook.com/refugiokimba.org/?locale=es_ES" target="_blank"
+                    rel="noopener noreferrer">
                     <img src="../media/iconos/logo-facebook.svg" alt="Facebook">
                 </a>
-                <a href="https://www.instagram.com/refugio_kimba/" target="_blank">
+                <a href="https://www.instagram.com/refugio_kimba/" target="_blank" rel="noopener noreferrer">
                     <img src="../media/iconos/logo-instagram.svg" alt="Instagram">
                 </a>
             </div>
