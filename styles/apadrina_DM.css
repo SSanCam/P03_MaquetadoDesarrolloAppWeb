@@ -56,17 +56,3 @@ button {
 button:hover {
     background-color: #A5D6A7;
 }
-
-/* ======================= */
-/* RESPONSIVE */
-/* ======================= */
-
-@media screen and (max-width: 768px) {
-    .formulario {
-        width: 95%;
-    }
-
-    input, select, button {
-        max-width: 100%; /* En pantallas pequeñas ocupa todo el ancho */
-    }
-}
