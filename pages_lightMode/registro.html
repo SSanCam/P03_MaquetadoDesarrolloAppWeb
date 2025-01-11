@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Refugio Kimba</title>
-    <link rel="stylesheet" href="../styles/dona.css">
     <link rel="stylesheet" href="../misc/base.css">
-    <link rel="stylesheet" href="../styles/apadrina.css">
-
+    <link rel="stylesheet" href="../styles/donacion.css">
+    <link rel="stylesheet" href="../styles/registro.css">
 </head>
 
 <body>
 
-    <!-- ✅ Ventana emergente de donación -->
     <div id="popup-donacion" class="popup">
         <div class="popup-content">
             <h2>Donación</h2>
@@ -38,7 +36,7 @@
 
             <!-- Mensaje de confirmación (inicialmente oculto) -->
             <div id="mensaje-confirmacion" style="display: none;">
-                <p>¡Gracias por tu apoyo!</p>
+                <p>Donación realizada con éxito. ¡Gracias por tu apoyo!</p>
                 <button onclick="cerrarPopupDonacion()">Aceptar</button>
             </div>
         </div>
@@ -47,7 +45,7 @@
     <!-- HEADER -->
     <header>
         <div class="container-header">
-            <div class="header-left-space"></div>
+            <div class="header-left-space"></div> <!-- Espacio vacío para centrar el menú -->
 
             <div class="header-left">
                 <a href="../pages_lightMode/principal.html">
@@ -56,7 +54,7 @@
             </div>
 
             <nav class="header-center">
-                <a href="../pages_lightMode/sobre_nosotros.html" class="nav-link">Sobre nosotros</a>
+                <a href="../pages_lightMode/sobrenosotros.html" class="nav-link">Sobre nosotros</a>
 
                 <div class="dropdown">
                     <a class="nav-link">Adopta</a>
@@ -80,91 +78,52 @@
             </nav>
 
             <div class="header-right">
-                <a href="../pages_darkMode/apadrina_DM.html" class="icon toggle-darkmode"><img
-                        src="../media/iconos/luna.png" alt="Modo oscuro"></a>
-                <a href="../pages_lightMode/login.html" class="icon"><img src="../media/iconos/perfil_LM.png" alt="Perfil"></a>
+                <a href="../pages_darkMode/registro_DM.html" class="icon toggle-darkmode"><img src="../media/iconos/sol.png"
+                        alt="Modo oscuro"></a>
+                <a href="../pages_lightMode/login.html" class="icon"><img src="../media/iconos/perfil_LM.png"
+                        alt="Perfil"></a>
             </div>
 
-            <div class="header-right-space"></div>
+            <div class="header-right-space"></div> <!-- Espacio vacío para equilibrar -->
         </div>
     </header>
 
-
     <!-- CONTENIDO PRINCIPAL -->
     <main class="container-main">
-        <h1>Apadrina ❤️</h1>
-        <section>
-            <article class="formulario">
-                <h2>Formulario de Apadrinamiento</h2>
-                <form onsubmit="mostrarPopup(event)">
+        <section class="registro-container">
+            <h2>Crear una cuenta</h2>
 
-                    <!-- Datos personales -->
-                    <div>
-                        <label for="nombre">Nombre completo</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
-                    <div>
-                        <label for="dni">DNI/NIE</label>
-                        <input type="text" id="dni" name="dni" required>
-                    </div>
-                    <div>
-                        <label for="direccion">Dirección completa</label>
-                        <input type="text" id="direccion" name="direccion" required>
-                    </div>
-                    <div>
-                        <label for="telefono">Teléfono de contacto</label>
-                        <input type="tel" id="telefono" name="telefono" required>
-                    </div>
-                    <div>
-                        <label for="email">Correo electrónico (opcional)</label>
-                        <input type="email" id="email" name="email">
-                    </div>
+            <form id="registro-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
 
-                    <!-- Selección del animal -->
-                    <div>
-                        <label for="animal">¿A qué animal quieres apadrinar?</label>
-                        <select id="animal" name="animal" required>
-                            <option value="">Selecciona un animal</option>
-                            <option value="luna">🐶 Luna</option>
-                            <option value="max">🐱 Max</option>
-                            <option value="bella">🐶 Bella</option>
-                            <option value="simba">🐱 Simba</option>
-                        </select>
-                    </div>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
 
-                    <!-- Información de pago -->
-                    <h3>Datos de pago</h3>
-                    <div>
-                        <label for="titular">Nombre del titular de la tarjeta</label>
-                        <input type="text" id="titular" name="titular" required>
-                    </div>
-                    <div>
-                        <label for="tarjeta">Número de tarjeta</label>
-                        <input type="text" id="tarjeta" name="tarjeta" maxlength="16" pattern="\d{16}" required>
-                    </div>
-                    <div>
-                        <label for="cvv">CVV</label>
-                        <input type="text" id="cvv" name="cvv" maxlength="3" pattern="\d{3}" required>
-                    </div>
-                    <div>
-                        <label for="cantidad">Cantidad a donar (€)</label>
-                        <input type="number" id="cantidad" name="cantidad" min="1" required>
-                    </div>
+                <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
 
-                    <button type="submit">Enviar Solicitud</button>
-                </form>
-            </article>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Registrarse</button>
+            </form>
+
+            <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
         </section>
     </main>
-
-    <script src="../misc/base.js"></script>
-    <script src="../js/popup_formularios.js"></script>
-    <script src="../js/donacion.js"></script>
-
-
     <!-- SCRIPTS -->
     <script src="../misc/base.js"></script>
-    <script src="../scripts/donacion.js"></script>
+    <script src="../js/donacion.js"></script>
+    <script src="../js/registro.js"></script>
+
+</body>
+
+</html>
+
 
     <!-- FOOTER -->
     <footer>
