@@ -5,7 +5,12 @@
 
 /* Ajustar la posición del formulario */
 .formulario {
-    margin-top: 10px; /* Ajusta el margen superior para una mejor distribución */
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
 }
 
 
@@ -95,18 +100,4 @@ button:hover {
 
 .popup-content button:hover {
     background-color: #8BC24A;
-}
-
-/* ======================= */
-/* RESPONSIVE */
-/* ======================= */
-
-@media screen and (max-width: 768px) {
-    .formulario {
-        width: 95%;
-    }
-    
-    input, select {
-        font-size: 1rem;
-    }
 }

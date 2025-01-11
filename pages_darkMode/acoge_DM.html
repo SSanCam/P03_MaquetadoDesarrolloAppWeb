@@ -4,16 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refugio Kimba -
-        <base href="">
-    </title>
+    <title>Refugio Kimba - Acoge</title>
     <link rel="stylesheet" href="../styles/dona.css">
-    <link rel="stylesheet" href="../misc/base_DM.css">
     <link rel="stylesheet" href="../styles/acoge_DM.css">
+    <link rel="stylesheet" href="../misc/base_DM.css">
+
 
 </head>
 
 <body>
+    <!-- ✅ Popup de confirmación de envío del formulario -->
+    <div id="popup-confirmacion" class="popup">
+        <div class="popup-content">
+            <h2>Formulario enviado con éxito.</h2>
+            <button onclick="cerrarPopupConfirmacion()">Aceptar</button>
+        </div>
+    </div>
 
     <div id="popup-donacion" class="popup">
         <div class="popup-content">
@@ -97,7 +103,7 @@
         <section>
             <article class="formulario">
                 <h2>Formulario de Acogida</h2>
-                <form action="procesar_acogida.php" method="POST">
+                <form id="formulario-acogida" onsubmit="mostrarPopup(event)">
                     <!-- Datos personales -->
                     <div>
                         <label for="nombre">Nombre completo</label>
@@ -178,8 +184,10 @@
         </section>
 
     </main>
+
     <script src="../misc/base.js"></script>
     <script src="../js/donacion.js"></script>
+    <script src="../js/popup_formulario.js"></script>
 
     <!-- FOOTER -->
     <footer>

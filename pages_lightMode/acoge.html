@@ -11,6 +11,15 @@
 </head>
 
 <body>
+    <!-- ✅ Popup de confirmación de envío del formulario -->
+    <div id="popup-confirmacion" class="popup">
+        <div class="popup-content">
+            <h2>Formulario enviado con éxito.</h2>
+            <button onclick="cerrarPopupConfirmacion()">Aceptar</button>
+        </div>
+    </div>
+
+
 
     <!-- ✅ Ventana emergente de donación -->
     <div id="popup-donacion" class="popup">
@@ -79,7 +88,8 @@
             </nav>
 
             <div class="header-right">
-                <a href="#" class="icon toggle-darkmode"><img src="../media/iconos/luna.png" alt="Modo oscuro"></a>
+                <a href="../pages_darkMode/acoge_DM.html" class="icon toggle-darkmode"><img
+                        src="../media/iconos/luna.png" alt="Modo oscuro"></a>
                 <a href="perfil.html" class="icon"><img src="../media/iconos/perfil_LM.png" alt="Perfil"></a>
             </div>
 
@@ -87,14 +97,13 @@
         </div>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL -->
     <main class="container-main">
         <!-- Aquí se insertará el contenido de cada página -->
         <h1>Acoge 🏡</h1>
         <section>
             <article class="formulario">
                 <h2>Formulario de Acogida</h2>
-                <form onsubmit="mostrarPopup(event)">
+                <form id="formulario-acogida" onsubmit="mostrarPopup(event)">
                     <!-- Datos personales -->
                     <div>
                         <label for="nombre">Nombre completo</label>
@@ -173,23 +182,18 @@
                 </form>
             </article>
         </section>
-        <!-- Ventana emergente de confirmación -->
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <p>Formulario enviado con éxito.</p>
-                <button onclick="cerrarPopup()">Aceptar</button>
-            </div>
-        </div>
 
     </main>
+    
     <script src="../misc/base.js"></script>
-    <script src="../js/popup_formularios.js"></script>
     <script src="../js/donacion.js"></script>
+    <script src="../js/popup_formulario.js"></script>
 
     <!-- FOOTER -->
     <footer>
         <div class="container-footer">
-            <p>Diseminado Pago el Cuartillo, 177, 11130, Cádiz</p>            <nav>
+            <p>Diseminado Pago el Cuartillo, 177, 11130, Cádiz</p>
+            <nav>
                 <a href="../pages_lightMode/error_404.html">Términos y Condiciones</a> |
                 <a href="../pages_lightMode/error_404.html">Política de Privacidad</a> |
                 <a href="../pages_lightMode/error_404.html">Acceso Legal</a> |
