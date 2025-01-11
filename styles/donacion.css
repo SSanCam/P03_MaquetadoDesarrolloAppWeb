@@ -1,7 +1,9 @@
-/* ✅ Evita que el popup aparezca antes de ser ocultado por JavaScript */
+/* ======================= */
+/* POPUP */
+/* ======================= */
+
 .popup {
-    display: none;
-    visibility: hidden;  /* 🔹 Asegura que no parpadee en la carga */
+    display: none; /* Oculto por defecto */
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -9,17 +11,12 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* ✅ Mostrar correctamente cuando se active con JavaScript */
-.popup.show {
-    display: flex;
-    visibility: visible;
-}
 
-/* ✅ Ajuste para mejorar compatibilidad con Dark Mode */
 .popup-content {
     background-color: #ffffff;
     padding: 20px;
@@ -32,7 +29,9 @@
 .popup-content h2 {
     color: #33691D;
 }
-
+.popup p {
+    text-align: center;
+}
 .popup-content button {
     margin-top: 15px;
     padding: 10px 15px;

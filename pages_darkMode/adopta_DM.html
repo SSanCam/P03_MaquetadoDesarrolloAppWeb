@@ -4,23 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refugio Kimba - Adopta un amigo
-        <base href="">
-    </title>
-    <link rel="stylesheet" href="../styles/dona.css">
+    <title>Refugio Kimba - Adopta un amigo</title>
+
     <link rel="stylesheet" href="../misc/base_DM.css">
     <link rel="stylesheet" href="../styles/adopta_DM.css">
-
-
+    <link rel="stylesheet" href="../styles/dona.css">
 </head>
 
 <body>
+
+    <!-- Ventana emergente de confirmación de donación -->
     <div id="popup-donacion" class="popup">
         <div class="popup-content">
             <h2>Donación</h2>
-
-            <!-- Formulario de donación -->
-            <form id="form-donacion" onsubmit="procesarDonacion(event)">
+            <form id="form-donacion">
                 <label for="titular">Nombre del titular:</label>
                 <input type="text" id="titular" name="titular" required>
 
@@ -36,19 +33,16 @@
                 <button type="submit">Donar</button>
                 <button type="button" onclick="cerrarPopupDonacion()">Cancelar</button>
             </form>
-
-            <!-- Mensaje de confirmación (inicialmente oculto) -->
             <div id="mensaje-confirmacion" style="display: none;">
                 <p>Donación realizada con éxito. ¡Gracias por tu apoyo!</p>
                 <button onclick="cerrarPopupDonacion()">Aceptar</button>
             </div>
         </div>
     </div>
+
     <!-- HEADER -->
     <header>
         <div class="container-header">
-            <div class="header-left-space"></div> <!-- Espacio vacío para centrar el menú -->
-
             <div class="header-left">
                 <a href="../pages_darkMode/principal_DM.html">
                     <img src="../media/iconos/icono_logo.png" alt="Logo Refugio Kimba" class="logo">
@@ -57,7 +51,6 @@
 
             <nav class="header-center">
                 <a href="../pages_darkMode/sobrenosotros_DM.html" class="nav-link">Sobre nosotros</a>
-
                 <div class="dropdown">
                     <a class="nav-link">Adopta</a>
                     <ul class="dropdown-menu">
@@ -65,7 +58,6 @@
                         <li><a href="../pages_darkMode/adopta_gato_DM.html">🐱 Gatos</a></li>
                     </ul>
                 </div>
-
                 <div class="dropdown">
                     <a class="nav-link">Ayúdales</a>
                     <ul class="dropdown-menu">
@@ -74,7 +66,6 @@
                         <li><a href="../pages_darkMode/apadrina_DM.html">❤️ Apadrina</a></li>
                     </ul>
                 </div>
-
                 <a href="../pages_darkMode/contacto_DM.html" class="nav-link">Contacta</a>
                 <a href="../pages_darkMode/construccion_DM.html" class="nav-link">Tienda</a>
             </nav>
@@ -83,77 +74,27 @@
                 <a href="../pages_lightMode/adopta.html" class="icon toggle-darkmode"><img src="../media/iconos/sol.png" alt="Modo oscuro"></a>
                 <a href="perfil.html" class="icon"><img src="../media/iconos/perfil_LM.png" alt="Perfil"></a>
             </div>
-
-            <div class="header-right-space"></div> <!-- Espacio vacío para equilibrar -->
-        </div>
-    </header>
-
-    
-    <!-- HEADER -->
-    <header>
-        <div class="container-header">
-            <div class="header-left-space"></div>
-
-            <div class="header-left">
-                <a href="../pages_darkMode/principal_DM.html">
-                    <img src="../media/iconos/icono_logo.png" alt="Logo Refugio Kimba" class="logo">
-                </a>
-            </div>
-
-            <nav class="header-center">
-                <a href="../pages_darkMode/sobrenosotros_DM.html" class="nav-link">Sobre nosotros</a>
-
-                <div class="dropdown">
-                    <a class="nav-link">Adopta</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../pages_lightMode/adopta_perro.html">🐶 Perros</a></li>
-                        <li><a href="../pages_lightMode/adopta_gato.html">🐱 Gatos</a></li>
-                    </ul>
-                </div>
-
-                <div class="dropdown">
-                    <a class="nav-link">Ayúdales</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../pages_darkMode/acoge_DM.html">🏠 Acoge</a></li>
-                        <li><a href="#" onclick="abrirPopupDonacion(); return false;">💰 Dona</a></li>
-                        <li><a href="../pages_darkMode/acoge_DM.html">❤️ Apadrina</a></li>
-                    </ul>
-                </div>
-
-                <a href="../pages_darkMode/contacto_DM.html" class="nav-link">Contacta</a>
-                <a href="../pages_darkMode/construccion_DM.html" class="nav-link">Tienda</a>
-            </nav>
-
-            <div class="header-right">
-                <a href="#" class="icon"><img src="../media/iconos/lupa.png" alt="Buscar"></a>
-                <a href="../pages_lightMode/adopta.html" class="icon toggle-darkmode"><img src="../media/iconos/sol.png" alt="Modo oscuro"></a>
-                <a href="perfil.html" class="icon"><img src="../media/iconos/perfil_LM.png" alt="Perfil"></a>
-            </div>
-
-            <div class="header-right-space"></div>
         </div>
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
     <main class="container-main">
-        <!-- Aquí se insertará el contenido de cada página -->
         <h1>Adopta 🏡</h1>
         <div class="informacion-previa">
             <p>
-                >> Antes de la adopción definitiva, debes saber que algún miembro de la protectora visitará el domicilio
-                del adoptante, para verificar el buen estado en el que vivirá el peludo.<br>
-                > Además, en primera instancia, los peludos se irán a vuestros hogares en calidad de acodiga
-                (durante un periodo máximo de <em>30 días.</em><br>)
-                >De ésta manera gozaréis de un período de gracia en el que podréis comprobar si tanto peludo como humano
-                y nueva vivienda y rutina sois totalmente compatibles.<br><br>
-                Si todo marcha bien...se formalizará la adopción!🎉
+                Antes de la adopción definitiva, debes saber que algún miembro de la protectora visitará el domicilio
+                del adoptante, para verificar el buen estado en el que vivirá el peludo.
+                Además, en primera instancia, los peludos se irán a vuestros hogares en calidad de acogida
+                durante un periodo máximo de <em>30 días.</em>
+                Si todo marcha bien...¡se formalizará la adopción! 🎉
             </p>
         </div>
+
+        <!-- Formulario de Adopción -->
         <section>
             <article class="formulario">
                 <h2>Formulario de Adopción</h2>
-                <form onsubmit="mostrarPopup(event)">
-                    <!-- Datos personales -->
+                <form id="form-adopcion">
                     <div>
                         <label for="nombre">Nombre completo</label>
                         <input type="text" id="nombre" name="nombre" required>
@@ -178,24 +119,11 @@
                         <label for="email">Correo electrónico (opcional)</label>
                         <input type="email" id="email" name="email">
                     </div>
-
-                    <div>
-                        <label>¿Tienes otros animales en casa?</label><br>
-                        <input type="radio" id="otros_si" name="otros_animales" value="si" required>
-                        <label for="otros_si">Sí</label>
-
-                        <input type="radio" id="otros_no" name="otros_animales" value="no" required>
-                        <label for="otros_no">No</label>
-                    </div>
-                    <div>
-                        <label for="tipo_animales">Si tienes animales, ¿cuántos y de qué tipo?</label>
-                        <input type="text" id="tipo_animales" name="tipo_animales">
-                    </div>
-
                     <button type="submit">Enviar Solicitud</button>
                 </form>
             </article>
         </section>
+
         <!-- Ventana emergente de confirmación -->
         <div id="popup" class="popup">
             <div class="popup-content">
@@ -203,13 +131,12 @@
                 <button onclick="cerrarPopup()">Aceptar</button>
             </div>
         </div>
-
     </main>
+
+    <!-- 🔹 SCRIPTS (En el orden correcto) -->
     <script src="../misc/base.js"></script>
-    <script src="../js/popup_formularios.js"></script>
+    <script src="../js/popup_formulario.js"></script> <!-- Asegura que el nombre es correcto -->
     <script src="../js/donacion.js"></script>
-
-
 
     <!-- FOOTER -->
     <footer>
@@ -221,17 +148,8 @@
                 <a href="../pages_darkMode/error_404_DM.html">Acceso Legal</a> |
                 <a href="../pages_darkMode/error_404_DM.html">Política de Cookies</a>
             </nav>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/refugiokimba.org/?locale=es_ES" target="_blank"
-                    rel="noopener noreferrer">
-                    <img src="../media/iconos/logo-facebook.svg" alt="Facebook">
-                </a>
-                <a href="https://www.instagram.com/refugio_kimba/" target="_blank" rel="noopener noreferrer">
-                    <img src="../media/iconos/logo-instagram.svg" alt="Instagram">
-                </a>
-            </div>
         </div>
     </footer>
-</body>
 
+</body>
 </html>
