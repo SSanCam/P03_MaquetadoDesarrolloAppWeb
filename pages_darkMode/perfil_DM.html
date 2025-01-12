@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Refugio Kimba - Perfil</title>
-    <link rel="stylesheet" href="../misc/base.css">
+    <link rel="stylesheet" href="../misc/base_DM.css">
     <link rel="stylesheet" href="../styles/donacion.css">
-    <link rel="stylesheet" href="../styles/perfil.css">
+    <link rel="stylesheet" href="../styles/perfil_DM.css">
 </head>
 
 <body>
 
-    <!-- POPUP DE DONACIÓN -->
     <div id="popup-donacion" class="popup">
         <div class="popup-content">
             <h2>Donación</h2>
+
+            <!-- Formulario de donación -->
             <form id="form-donacion" onsubmit="procesarDonacion(event)">
                 <label for="titular">Nombre del titular:</label>
                 <input type="text" id="titular" name="titular" required>
@@ -32,74 +33,79 @@
                 <button type="submit">Donar</button>
                 <button type="button" onclick="cerrarPopupDonacion()">Cancelar</button>
             </form>
+
+            <!-- Mensaje de confirmación (inicialmente oculto) -->
+            <div id="mensaje-confirmacion" style="display: none;">
+                <p>Donación realizada con éxito. ¡Gracias por tu apoyo!</p>
+                <button onclick="cerrarPopupDonacion()">Aceptar</button>
+            </div>
         </div>
     </div>
 
     <!-- HEADER -->
     <header>
         <div class="container-header">
-            <div class="header-left-space"></div>
+            <div class="header-left-space"></div> <!-- Espacio vacío para centrar el menú -->
 
             <div class="header-left">
-                <a href="../pages_lightMode/principal.html">
+                <a href="../pages_darkMode/principal_DM.html">
                     <img src="../media/iconos/icono_logo.png" alt="Logo Refugio Kimba" class="logo">
                 </a>
             </div>
 
             <nav class="header-center">
-                <a href="../pages_lightMode/sobrenosotros.html" class="nav-link">Sobre nosotros</a>
+                <a href="../pages_darkMode/sobrenosotros_DM.html" class="nav-link">Sobre nosotros</a>
 
                 <div class="dropdown">
                     <a class="nav-link">Adopta</a>
                     <ul class="dropdown-menu">
-                        <li><a href="../pages_lightMode/adopta_perro.html">🐶 Perros</a></li>
-                        <li><a href="../pages_lightMode/adopta_gato.html">🐱 Gatos</a></li>
+                        <li><a href="../pages_darkMode/adopta_perro_DM.html">🐶 Perros</a></li>
+                        <li><a href="../pages_darkMode/adopta_gato_DM.html">🐱 Gatos</a></li>
                     </ul>
                 </div>
 
                 <div class="dropdown">
                     <a class="nav-link">Ayúdales</a>
                     <ul class="dropdown-menu">
-                        <li><a href="../pages_lightMode/acoge.html">🏠 Acoge</a></li>
+                        <li><a href="../pages_darkMode/acoge_DM.html">🏠 Acoge</a></li>
                         <li><a href="#" onclick="abrirPopupDonacion(); return false;">💰 Dona</a></li>
-                        <li><a href="../pages_lightMode/apadrina.html">❤️ Apadrina</a></li>
+                        <li><a href="../pages_darkMode/apadrina_DM.html">❤️ Apadrina</a></li>
                     </ul>
                 </div>
 
-                <a href="../pages_lightMode/contacto.html" class="nav-link">Contacta</a>
-                <a href="../pages_lightMode/construccion.html" class="nav-link">Tienda</a>
+                <a href="../pages_darkMode/contacto_DM.html" class="nav-link">Contacta</a>
+                <a href="../pages_darkMode/construccion_DM.html" class="nav-link">Tienda</a>
             </nav>
 
             <div class="header-right">
-                <a href="../pages_darkMode/perfil_DM.html" class="icon toggle-darkmode">
-                    <img src="../media/iconos/luna.png" alt="Modo oscuro">
-                </a>
-                <a href="../pages_lightMode/perfil.html" class="icon perfil-icon"> <!-- ✅ Agregar la clase perfil-icon -->
+                <a href="../pages_lightMode/perfil.html" class="icon toggle-darkmode"><img src="../media/iconos/sol.png"
+                        alt="Modo oscuro"></a>
+                <a href="../pages_darkMode/perfil_DM.html" class="icon perfil-icon">
                     <img src="../media/images/foto_perfill.jpg" alt="Perfil">
                 </a>
             </div>
 
-            <div class="header-right-space"></div>
+            <div class="header-right-space"></div> <!-- Espacio vacío para equilibrar -->
         </div>
     </header>
 
     <main class="container-main">
         <div class="perfil-container">
 
-            <!-- LADO IZQUIERDO: Información del perfil -->
+            <!-- 📌 LADO IZQUIERDO: Información del perfil -->
             <div class="perfil-info">
-                <img src="../media/images/foto_perfill.jpg" alt="Foto de perfil" id="perfilFoto" class="perfil-foto">
-                <h2 id="perfilNombre">Nombre: Hermenegildo</h2>
+                <img src="../media/images/foto_perfill.jpg" alt="Foto de perfil" class="perfil-foto">
+                <h2>Nombre: Hermenegildo</h2>
                 <p>Email: herme@example.com</p>
 
-                <!-- Iconos de acciones -->
+                <!-- 📌 Iconos de acciones (enviar correo y editar perfil) -->
                 <div class="perfil-acciones">
                     <img src="../media/iconos/mail.jpg" alt="Enviar correo" class="icono" onclick="abrirPopupCorreo()">
                     <img src="../media/iconos/edit.png" alt="Editar perfil" class="icono" onclick="abrirPopupEditar()">
                 </div>
             </div>
 
-            <!-- LADO DERECHO: Actualizaciones -->
+            <!-- 📌 LADO DERECHO: Actualizaciones -->
             <div class="perfil-actualizaciones">
                 <h2>Últimas actualizaciones</h2>
 
@@ -115,6 +121,7 @@
             </div>
 
         </div>
+
         <!-- 📌 POPUP para enviar correo -->
         <div id="popup-correo" class="popup">
             <div class="popup-content">
@@ -156,6 +163,7 @@
             </div>
         </div>
 
+
         <!-- POPUP DE CONFIRMACIÓN -->
         <div id="popup-guardado" class="popup">
             <div class="popup-content">
@@ -164,6 +172,7 @@
             </div>
         </div>
 
+
     </main>
 
     <!-- SCRIPTS -->
@@ -171,6 +180,31 @@
     <script src="../js/donacion.js"></script>
     <script src="../js/perfil.js"></script>
 
+</body>
+
+</html>
+
+
+<!-- FOOTER -->
+<footer>
+    <div class="container-footer">
+        <p>Diseminado Pago el Cuartillo, 177, 11130, Cádiz</p>
+        <nav>
+            <a href="../pages_lightMode/error_404.html">Términos y Condiciones</a> |
+            <a href="../pages_lightMode/error_404.html">Política de Privacidad</a> |
+            <a href="../pages_lightMode/error_404.html">Acceso Legal</a> |
+            <a href="../pages_lightMode/error_404.html">Política de Cookies</a>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/refugiokimba.org/?locale=es_ES" target="_blank">
+                <img src="../media/iconos/logo-facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/refugio_kimba/" target="_blank">
+                <img src="../media/iconos/logo-instagram.svg" alt="Instagram">
+            </a>
+        </div>
+    </div>
+</footer>
 </body>
 
 </html>

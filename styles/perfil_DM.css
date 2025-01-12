@@ -1,0 +1,226 @@
+/* ========================== */
+/* PERFIL - Estilos generales */
+/* ========================== */
+.perfil-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    gap: 30px; /* Espacio entre los bloques */
+    padding-top: 5rem; /* Ajuste para evitar descuadres */
+}
+
+/* ========================== */
+/* PERFIL - LADO IZQUIERDO (INFO) */
+/* ========================== */
+.perfil-info {
+    width: 35%;
+    text-align: center;
+    background-color: #63797F;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #33691D; /* ✅ Borde de 3px con color verde oscuro */
+}
+
+.perfil-foto {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Hace que tenga un fondo redondeado */
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #33691D; /* ✅ Borde de 3px con color verde oscuro */
+}
+
+.perfil-datos {
+    text-align: left;
+    width: 100%;
+}
+
+.perfil-datos p, h2{
+    margin: 5px 0;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.perfil-acciones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.perfil-acciones img {
+    border-radius: 50%; /* Hace que tenga un fondo redondeado */
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 3px solid #33691D; /* ✅ Borde de 3px con color verde oscuro */
+
+}
+
+/* ========================== */
+/* PERFIL - LADO DERECHO (ACTUALIZACIONES) */
+/* ========================== */
+.perfil-actualizaciones {
+    border: 3px solid #33691D; /* ✅ Borde de 3px con color verde oscuro */
+    border-radius: 15px;
+    width: 65%;
+    background-color: #63797F;
+    padding: 5%;
+}
+
+.perfil-actualizaciones h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Tarjetas de actualizaciones */
+.tarjeta-actualizacion {
+    display: flex;
+    align-items: center;
+    background-color: #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    gap: 15px;
+}
+
+.tarjeta-actualizacion img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.tarjeta-actualizacion .contenido {
+    background-color: #63797F;
+    flex: 1;
+}
+
+.tarjeta-actualizacion p {
+    color: #233746;
+}
+/* ========================== */
+/* POPUPS - Estilos generales */
+/* ========================== */
+.popup {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #63797F;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 350px;
+}
+
+.popup-content h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.popup-content label {
+    color: #ffffff;
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.popup-content input,
+.popup-content textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.popup-content button {
+    background-color: #233746;
+}
+.popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.popup-buttons button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.popup-buttons .enviar {
+    background-color: #233746;
+    color: white;
+}
+
+.popup-buttons .cancelar {
+    background-color: #233746;
+}
+
+.popup-buttons .enviar:hover {
+    background-color: #D29F68;
+}
+
+.popup-buttons .cancelar:hover {
+    background-color: #D29F68;
+}
+
+.popup-content button:hover {
+    background-color: #D29F68;
+}
+
+.icon img {
+    height: 50px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+.popup-editar {
+    display: flex;
+}
+
+.perfil-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px; /* Asegura un tamaño adecuado */
+    height: 70px;
+    border-radius: 50%; /* Hace el fondo redondo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Efecto de sombra */
+    overflow: hidden; /* Evita que la imagen sobresalga */
+}
+
+.perfil-icon img {
+    width: 100%; /* Ajusta la imagen al contenedor */
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen llene el espacio sin deformarse */
+    transition: transform 0.3s ease-in-out;
+}
+
+.perfil-icon:hover {
+    transform: scale(1.1); /* Efecto de agrandado */
+}
