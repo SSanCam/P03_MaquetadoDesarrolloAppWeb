@@ -33,12 +33,6 @@ html, body {
     overflow-x: hidden;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Quicksand', Arial, sans-serif;
     background-color: #233746;

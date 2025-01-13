@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Refugio Kimba - Principal</title>
     <link rel="stylesheet" href="../styles/principal_darkMode.css">
-    <link rel="stylesheet" href="../styles/donacion_DM.css">
     <link rel="stylesheet" href="../misc/base_DM.css">
 </head>
 
@@ -15,7 +14,6 @@
         <div class="popup-content">
             <h2>Donación</h2>
 
-            <!-- Formulario de donación -->
             <form id="form-donacion" onsubmit="procesarDonacion(event)">
                 <label for="titular">Nombre del titular:</label>
                 <input type="text" id="titular" name="titular" required>
@@ -32,14 +30,9 @@
                 <button type="submit">Donar</button>
                 <button type="button" onclick="cerrarPopupDonacion()">Cancelar</button>
             </form>
-
-            <!-- Mensaje de confirmación (inicialmente oculto) -->
-            <div id="mensaje-confirmacion" style="display: none;">
-                <p>Donación realizada con éxito. ¡Gracias por tu apoyo!</p>
-                <button onclick="cerrarPopupDonacion()">Aceptar</button>
-            </div>
         </div>
     </div>
+
     <!-- HEADER -->
     <header>
         <div class="container-header">
@@ -76,8 +69,10 @@
             </nav>
 
             <div class="header-right">
-                <a href="../pages_lightMode/principal.html" class="icon toggle-darkmode"><img src="../media/iconos/sol.png" alt="Modo oscuro"></a>
-                <a href="../pages_darkMode/login_DM.html" class="icon"><img src="../media/iconos/perfil_LM.png" alt="Perfil"></a>
+                <a href="../pages_lightMode/principal.html" class="icon toggle-darkmode"><img
+                        src="../media/iconos/sol.png" alt="Modo oscuro"></a>
+                <a href="../pages_darkMode/login_DM.html" class="icon"><img src="../media/iconos/perfil_LM.png"
+                        alt="Perfil"></a>
             </div>
 
             <div class="header-right-space"></div> <!-- Espacio vacío para equilibrar -->
@@ -154,7 +149,7 @@
                     <img src="../media/entidades_colaboradoras/PET_MAIL.png" alt="ASPA">
                 </a>
             </div>
-            
+
 
 
 
@@ -166,27 +161,26 @@
 
 </body>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container-footer">
-            <p>Diseminado Pago el Cuartillo, 177, 11130, Cádiz</p>
-            <nav>
-                <a href="../pages_darkMode/error_404_DM.html">Términos y Condiciones</a> |
-                <a href="../pages_darkMode/error_404_DM.html">Política de Privacidad</a> |
-                <a href="../pages_darkMode/error_404_DM.html">Acceso Legal</a> |
-                <a href="../pages_darkMode/error_404_DM.html">Política de Cookies</a>
-            </nav>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/refugiokimba.org/?locale=es_ES" target="_blank"
-                    rel="noopener noreferrer">
-                    <img src="../media/iconos/logo-facebook.svg" alt="Facebook">
-                </a>
-                <a href="https://www.instagram.com/refugio_kimba/" target="_blank" rel="noopener noreferrer">
-                    <img src="../media/iconos/logo-instagram.svg" alt="Instagram">
-                </a>
-            </div>
+<!-- FOOTER -->
+<footer>
+    <div class="container-footer">
+        <p>Diseminado Pago el Cuartillo, 177, 11130, Cádiz</p>
+        <nav>
+            <a href="../pages_darkMode/error_404_DM.html">Términos y Condiciones</a> |
+            <a href="../pages_darkMode/error_404_DM.html">Política de Privacidad</a> |
+            <a href="../pages_darkMode/error_404_DM.html">Acceso Legal</a> |
+            <a href="../pages_darkMode/error_404_DM.html">Política de Cookies</a>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/refugiokimba.org/?locale=es_ES" target="_blank" rel="noopener noreferrer">
+                <img src="../media/iconos/logo-facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/refugio_kimba/" target="_blank" rel="noopener noreferrer">
+                <img src="../media/iconos/logo-instagram.svg" alt="Instagram">
+            </a>
         </div>
-    </footer>
+    </div>
+</footer>
 
 
 </html>
