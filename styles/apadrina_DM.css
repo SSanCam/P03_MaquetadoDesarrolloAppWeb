@@ -7,13 +7,19 @@
     max-width: 600px;
     margin: auto;
     padding: 20px;
-    background-color: #63797F;
-    border-radius: 10px;
+    background-color: #63797F; /* Fondo del formulario */
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out; /* Animación opcional */
 }
 
-.formulario h2, .formulario h3 {
+.formulario h2, 
+.formulario h3 {
     text-align: center;
-    color: #8BC24A; /* Verde claro */
+    color: #D29F68; /* Verde consistente */
+    font-family: 'Quicksand_Bold', Arial, sans-serif; /* Fuente consistente */
+    margin-bottom: 20px;
 }
 
 .formulario div {
@@ -25,34 +31,51 @@ label {
     display: block;
     margin-bottom: 5px;
     color: #ffffff; /* Texto en blanco */
+    font-family: 'Quicksand_Bold', Arial, sans-serif; /* Fuente consistente */
 }
 
 input, select {
-    width: 100%; /* Ajuste correcto */
-    max-width: 500px; /* Limita el ancho máximo */
+    width: 100%;
+    max-width: 500px;
     display: block;
-    padding: 8px;
+    padding: 10px;
     margin: auto;
-    background-color: #ffffff; /* Fondo oscuro de los inputs */
-    color: #000000; 
+    background-color: #cccccc; /* Fondo blanco para inputs */
+    color: #000000; /* Texto negro */
+    border: 1px solid #D29F68; /* Borde gris claro */
     border-radius: 5px;
     font-size: 1rem;
+    font-family: 'Quicksand_Light', Arial, sans-serif; /* Fuente consistente */
 }
 
 button {
     display: block;
     width: 100%;
-    max-width: 500px; /* Evita que sea más ancho */
+    max-width: 500px;
     margin: auto;
     padding: 10px;
-    background-color: #8BC24A;
-    color: #63797F;
+    background-color: #33691D; /* Fondo verde */
+    color: #ffffff; /* Texto blanco */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.2rem;
+    font-family: 'Quicksand_Bold', Arial, sans-serif; /* Fuente consistente */
+    transition: background-color 0.3s ease; /* Transición suave */
 }
 
 button:hover {
-    background-color: #A5D6A7;
+    background-color: #8BC24A; /* Verde claro para hover */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }

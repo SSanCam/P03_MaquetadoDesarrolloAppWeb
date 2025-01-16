@@ -71,56 +71,10 @@ button:hover {
     background-color: #8BC24A;
 }
 
-/* ======================= */
-/* POPUP */
-/* ======================= */
-
-.popup {
-    display: none; /* Oculto por defecto */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.informacion-previa{
+    background-color: #D29F68;
 }
 
-
-.popup-content {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    width: 300px;
-}
-
-.popup-content h2 {
-    color: #33691D;
-}
-.popup p {
-    text-align: center;
-}
-.popup-content button {
-    margin-top: 15px;
-    padding: 10px 15px;
-    border: none;
-    background-color: #33691D;
+.informacion-previa p {
     color: #ffffff;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-}
-
-.popup-content button:hover {
-    background-color: #8BC24A;
-}
-
-.mensaje-confirmacion {
-    display: none;
 }

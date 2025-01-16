@@ -1,17 +1,15 @@
-function cerrarPopupConfirmacion(popupId) {
-    let popup = document.getElementById(popupId);
+function procesarApadrinamiento(event) {
+    event.preventDefault(); // Evitar que el formulario recargue la página
+
+    let popup = document.getElementById("popup-confirmacion");
     if (popup) {
-        popup.style.display = "none";
+        popup.style.display = "flex"; // Mostrar el popup
     }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Agregar eventos de clic a los botones de confirmación
-    let botonesConfirmacion = document.querySelectorAll(".boton-confirmacion");
-    botonesConfirmacion.forEach(boton => {
-        boton.addEventListener("click", function () {
-            let popupId = this.getAttribute("data-popup-id");
-            cerrarPopupConfirmacion(popupId);
-        });
-    });
-});
+function cerrarPopupConfirmacion(popupId) {
+    let popup = document.getElementById(popupId);
+    if (popup) {
+        popup.style.display = "none"; // Ocultar el popup
+    }
+}
