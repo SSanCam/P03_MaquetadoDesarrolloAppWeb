@@ -503,3 +503,19 @@ footer {
         transform: scale(1);
     }
 }
+
+button{
+    background-color: #33691D;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Quicksand_Bold', Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8BC24A;
+}
