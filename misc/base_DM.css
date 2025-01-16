@@ -422,3 +422,53 @@ footer {
         transform: scale(1);
     }
 }
+
+
+/* Estilos del menú hamburguesa */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    background: #333;
+    height: 3px;
+    width: 25px;
+    display: block;
+    border-radius: 2px;
+}
+
+/* Esconder el menú en pantallas pequeñas */
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.menu-active {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Media Query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Ajustar textos */
+.responsive-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
