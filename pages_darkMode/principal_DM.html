@@ -10,10 +10,13 @@
 </head>
 
 <body>
+
+    <!-- Pop Up donación -->
     <div id="popup-donacion" class="popup">
         <div class="popup-content">
             <h2>Donación</h2>
 
+            <!-- Formulario de donación -->
             <form id="form-donacion" onsubmit="procesarDonacion(event)">
                 <label for="titular">Nombre del titular:</label>
                 <input type="text" id="titular" name="titular" required>
@@ -30,6 +33,12 @@
                 <button type="submit">Donar</button>
                 <button type="button" onclick="cerrarPopupDonacion()">Cancelar</button>
             </form>
+
+            <!-- Mensaje de confirmación (inicialmente oculto) -->
+            <div id="mensaje-confirmacion" style="display: none;">
+                <p>Donación realizada con éxito. ¡Gracias por tu apoyo!</p>
+                <button onclick="cerrarPopupDonacion()">Aceptar</button>
+            </div>
         </div>
     </div>
 

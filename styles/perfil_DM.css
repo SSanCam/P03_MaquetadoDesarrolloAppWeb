@@ -136,7 +136,7 @@
 .popup-content h2 {
     margin-bottom: 15px;
     font-size: 1.5rem;
-    color: #fff;
+    color: #ffffff;
 }
 
 .popup-content label {
@@ -149,6 +149,7 @@
 
 .popup-content input,
 .popup-content textarea {
+    background-color: #ccc;
     width: 100%;
     padding: 8px;
     margin-top: 5px;
@@ -175,11 +176,13 @@
 
 .popup-buttons .enviar {
     background-color: #233746;
-    color: white;
+    color: #ffffff;
 }
 
 .popup-buttons .cancelar {
     background-color: #233746;
+    color: #ffffff;
+
 }
 
 .popup-buttons .enviar:hover {
@@ -198,9 +201,6 @@
     height: 50px;
     vertical-align: middle;
     transition: transform 0.3s ease;
-}
-.popup-editar {
-    display: flex;
 }
 
 .perfil-icon {

@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Refugio Kimba - Perfil</title>
     <link rel="stylesheet" href="../misc/base_DM.css">
-    <link rel="stylesheet" href="../styles/donacion.css">
     <link rel="stylesheet" href="../styles/perfil_DM.css">
 </head>
 
 <body>
 
+    <!-- Pop Up donación -->
     <div id="popup-donacion" class="popup">
         <div class="popup-content">
             <h2>Donación</h2>
@@ -42,6 +42,14 @@
         </div>
     </div>
 
+
+    <!-- POPUP DE CONFIRMACIÓN -->
+    <div id="popup-guardado" class="popup">
+        <div class="popup-content">
+            <p>Cambios guardados con éxito.</p>
+            <button onclick="cerrarPopupGuardado()">Aceptar</button>
+        </div>
+    </div>
     <!-- HEADER -->
     <header>
         <div class="container-header">
@@ -140,38 +148,6 @@
                 </form>
             </div>
         </div>
-
-        <!-- POPUP PARA EDITAR PERFIL -->
-        <div id="popup-editar" class="popup">
-            <div class="popup-content">
-                <h2>Editar Perfil</h2>
-                <form id="form-editar" onsubmit="guardarEdicion(event)">
-                    <label for="nuevoNombre">Nuevo Nombre:</label>
-                    <input type="text" id="nuevoNombre" name="nuevoNombre" required>
-
-                    <label for="nuevoApellido">Nuevo Apellido:</label>
-                    <input type="text" id="nuevoApellido" name="nuevoApellido" required>
-
-                    <label for="nuevaFoto">Cambiar Foto:</label>
-                    <input type="file" id="nuevaFoto" name="nuevaFoto" accept="image/*">
-
-                    <div class="popup-buttons">
-                        <button type="submit" class="enviar">Guardar</button>
-                        <button type="button" class="cancelar" onclick="cerrarPopupEditar()">Cancelar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-
-        <!-- POPUP DE CONFIRMACIÓN -->
-        <div id="popup-guardado" class="popup">
-            <div class="popup-content">
-                <p>Cambios guardados con éxito.</p>
-                <button onclick="cerrarPopupGuardado()">Aceptar</button>
-            </div>
-        </div>
-
 
     </main>
 

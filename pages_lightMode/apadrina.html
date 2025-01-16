@@ -13,7 +13,7 @@
 
 <body>
 
-    <!-- ✅ Ventana emergente de donación -->
+    <!-- Pop Up donación -->
     <div id="popup-donacion" class="popup">
         <div class="popup-content">
             <h2>Donación</h2>
@@ -38,7 +38,7 @@
 
             <!-- Mensaje de confirmación (inicialmente oculto) -->
             <div id="mensaje-confirmacion" style="display: none;">
-                <p>¡Gracias por tu apoyo!</p>
+                <p>Donación realizada con éxito. ¡Gracias por tu apoyo!</p>
                 <button onclick="cerrarPopupDonacion()">Aceptar</button>
             </div>
         </div>
@@ -82,7 +82,8 @@
             <div class="header-right">
                 <a href="../pages_darkMode/apadrina_DM.html" class="icon toggle-darkmode"><img
                         src="../media/iconos/luna.png" alt="Modo oscuro"></a>
-                <a href="../pages_lightMode/login.html" class="icon"><img src="../media/iconos/perfil_LM.png" alt="Perfil"></a>
+                <a href="../pages_lightMode/login.html" class="icon"><img src="../media/iconos/perfil_LM.png"
+                        alt="Perfil"></a>
             </div>
 
             <div class="header-right-space"></div>
@@ -157,15 +158,10 @@
         </section>
     </main>
 
-    <script src="../misc/base.js"></script>
-    <script src="../js/popup_formularios.js"></script>
-    <script src="../js/donacion.js"></script>
-
-
     <!-- SCRIPTS -->
     <script src="../misc/base.js"></script>
-    <script src="../scripts/donacion.js"></script>
-
+    <script src="../js/donacion.js"></script>
+    <script src="../js/popup_formularios.js"></script>
     <!-- FOOTER -->
     <footer>
         <div class="container-footer">

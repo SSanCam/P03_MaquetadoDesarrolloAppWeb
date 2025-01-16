@@ -6,15 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Refugio Kimba - Contacta</title>
     <link rel="stylesheet" href="../misc/base.css">
-    <link rel="stylesheet" href="../styles/donacion.css">
     <link rel="stylesheet" href="../styles/contacto.css">
 
 </head>
 
 <body>
-
-
-    <!-- ✅ Ventana emergente de donación -->
+    <!-- Pop Up donación -->
     <div id="popup-donacion" class="popup">
         <div class="popup-content">
             <h2>Donación</h2>
@@ -44,8 +41,6 @@
             </div>
         </div>
     </div>
-
-    <!-- HEADER -->
     <header>
         <div class="container-header">
             <div class="header-left-space"></div>
@@ -82,13 +77,13 @@
 
             <div class="header-right">
                 <a href="../pages_darkMode/contacto_DM.html" class="icon toggle-darkmode"><img src="../media/iconos/luna.png" alt="Modo oscuro"></a>
-                <a href="../pages_lightMode/login.html" class="icon"><img src="../media/iconos/perfil_LM.png" alt="Perfil"></a>
+                <a href="perfil.html" class="icon"><img src="../media/iconos/perfil_LM.png" alt="Perfil"></a>
             </div>
 
             <div class="header-right-space"></div>
         </div>
     </header>
-    <!-- CONTENIDO PRINCIPAL -->
+
     <main class="container-main">
 
         <div class="contacto-container">
@@ -104,7 +99,6 @@
                     <p>📞+34 987 654 321</p>
                     <p>🕘Lunes - Viernes: 9:00 - 15:00</p>
             </div>
-            <!-- Mapa de Google -->
             <div class="mapa-container">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3212.0618813360697!2d-6.0806527875609975!3d36.38349597225361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c35f1e780dea9%3A0x1d55890d6c6fbbe!2sRefugio%20Kimba%20Chiclana!5e0!3m2!1ses!2ses!4v1736421886211!5m2!1ses!2ses"
@@ -117,7 +111,7 @@
         <section class="formulario-contacto">
             <h2>📩 Envíanos un mensaje</h2>
             <form id="form-contacto">
-                <label for="nombre" >Nombre:</label>
+                <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
 
                 <label for="email">Correo Electrónico:</label>
@@ -133,13 +127,10 @@
 
     </main>
 
-    <!-- SCRIPTS -->
-    <script src="../misc/base.js"></script>
     <script src="../js/donacion.js"></script>
-    <script src="../js/popup_formulario.js"></script>
+    <script src="../misc/base.js"></script>
     
 
-    <!-- FOOTER -->
     <footer>
         <div class="container-footer">
             <p>Diseminado Pago el Cuartillo, 177, 11130, Cádiz</p>

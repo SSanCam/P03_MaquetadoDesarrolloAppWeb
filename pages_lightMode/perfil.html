@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Refugio Kimba - Perfil</title>
     <link rel="stylesheet" href="../misc/base.css">
-    <link rel="stylesheet" href="../styles/donacion.css">
     <link rel="stylesheet" href="../styles/perfil.css">
 </head>
 
 <body>
 
-    <!-- POPUP DE DONACIÓN -->
+    <!-- Pop Up donación -->
     <div id="popup-donacion" class="popup">
         <div class="popup-content">
             <h2>Donación</h2>
+
+            <!-- Formulario de donación -->
             <form id="form-donacion" onsubmit="procesarDonacion(event)">
                 <label for="titular">Nombre del titular:</label>
                 <input type="text" id="titular" name="titular" required>
@@ -32,9 +33,14 @@
                 <button type="submit">Donar</button>
                 <button type="button" onclick="cerrarPopupDonacion()">Cancelar</button>
             </form>
+
+            <!-- Mensaje de confirmación (inicialmente oculto) -->
+            <div id="mensaje-confirmacion" style="display: none;">
+                <p>Donación realizada con éxito. ¡Gracias por tu apoyo!</p>
+                <button onclick="cerrarPopupDonacion()">Aceptar</button>
+            </div>
         </div>
     </div>
-
     <!-- HEADER -->
     <header>
         <div class="container-header">
@@ -160,7 +166,7 @@
         <div id="popup-guardado" class="popup">
             <div class="popup-content">
                 <p>Cambios guardados con éxito.</p>
-                <button onclick="cerrarPopupGuardado()">Aceptar</button>
+                <button class="boton-confirmacion" data-popup-id="popup-guardado">Aceptar</button>
             </div>
         </div>
 
@@ -170,6 +176,7 @@
     <script src="../misc/base.js"></script>
     <script src="../js/donacion.js"></script>
     <script src="../js/perfil.js"></script>
+    <script src="../js/confirmar.js"></script>
 
 </body>
 

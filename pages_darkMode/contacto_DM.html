@@ -7,38 +7,40 @@
     <title>Refugio Kimba - Contacta</title>
     <link rel="stylesheet" href="../misc/base_DM.css">
     <link rel="stylesheet" href="../styles/contacto_DM.css">
-    <link rel="stylesheet" href="../styles/donacion_DM.css">
 
 <body>
-    <div id="popup-donacion" class="popup">
-        <div class="popup-content">
-            <h2>Donación</h2>
 
-            <!-- Formulario de donación -->
-            <form id="form-donacion" onsubmit="procesarDonacion(event)">
-                <label for="titular">Nombre del titular:</label>
-                <input type="text" id="titular" name="titular" required>
-
-                <label for="tarjeta">Número de tarjeta:</label>
-                <input type="text" id="tarjeta" name="tarjeta" maxlength="16" pattern="\d{16}" required>
-
-                <label for="cvv">CVV:</label>
-                <input type="text" id="cvv" name="cvv" maxlength="3" pattern="\d{3}" required>
-
-                <label for="cantidad">Cantidad a donar (€):</label>
-                <input type="number" id="cantidad" name="cantidad" min="1" required>
-
-                <button type="submit">Donar</button>
-                <button type="button" onclick="cerrarPopupDonacion()">Cancelar</button>
-            </form>
-
-            <!-- Mensaje de confirmación (inicialmente oculto) -->
-            <div id="mensaje-confirmacion" style="display: none;">
-                <p>Donación realizada con éxito. ¡Gracias por tu apoyo!</p>
-                <button onclick="cerrarPopupDonacion()">Aceptar</button>
+        <!-- Pop Up donación -->
+        <div id="popup-donacion" class="popup">
+            <div class="popup-content">
+                <h2>Donación</h2>
+    
+                <!-- Formulario de donación -->
+                <form id="form-donacion" onsubmit="procesarDonacion(event)">
+                    <label for="titular">Nombre del titular:</label>
+                    <input type="text" id="titular" name="titular" required>
+    
+                    <label for="tarjeta">Número de tarjeta:</label>
+                    <input type="text" id="tarjeta" name="tarjeta" maxlength="16" pattern="\d{16}" required>
+    
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" maxlength="3" pattern="\d{3}" required>
+    
+                    <label for="cantidad">Cantidad a donar (€):</label>
+                    <input type="number" id="cantidad" name="cantidad" min="1" required>
+    
+                    <button type="submit">Donar</button>
+                    <button type="button" onclick="cerrarPopupDonacion()">Cancelar</button>
+                </form>
+    
+                <!-- Mensaje de confirmación (inicialmente oculto) -->
+                <div id="mensaje-confirmacion" style="display: none;">
+                    <p>Donación realizada con éxito. ¡Gracias por tu apoyo!</p>
+                    <button onclick="cerrarPopupDonacion()">Aceptar</button>
+                </div>
             </div>
         </div>
-    </div>
+
     <!-- HEADER -->
     <header>
         <div class="container-header">
