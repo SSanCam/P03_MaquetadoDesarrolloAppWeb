@@ -73,12 +73,3 @@ body {
     display: block;
 }
 
-/* ======================= */
-/* RESPONSIVE */
-/* ======================= */
-
-@media screen and (max-width: 768px) {
-    .voluntarios img {
-        width: 80%;
-    }
-}

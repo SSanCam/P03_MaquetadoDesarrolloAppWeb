@@ -85,24 +85,3 @@ body {
     transform: scale(1.2);
 }
 
-
-@font-face {
-    font-family: 'Lemon Juice';
-    src: url('../fonts/LemonJuice.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Quicksand_Light';
-    src: url('../fonts/Quicksand_Light.otf') format('opentype');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Quicksand_Bold';
-    src: url('../fonts/Quicksand_Bold.otf') format('opentype');
-    font-weight: 700;
-    font-style: normal;
-}

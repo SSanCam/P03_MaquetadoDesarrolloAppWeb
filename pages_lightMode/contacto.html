@@ -11,6 +11,14 @@
 </head>
 
 <body>
+    <!-- Popup de confirmación de envío del formulario -->
+    <div id="popup-confirmacion" class="popup">
+        <div class="popup-content">
+            <h2>Formulario enviado con éxito.</h2>
+            <button onclick="cerrarPopupConfirmacion()">Aceptar</button>
+        </div>
+    </div>
+
     <!-- Pop Up donación -->
     <div id="popup-donacion" class="popup">
         <div class="popup-content">
@@ -76,7 +84,8 @@
             </nav>
 
             <div class="header-right">
-                <a href="../pages_darkMode/contacto_DM.html" class="icon toggle-darkmode"><img src="../media/iconos/luna.png" alt="Modo oscuro"></a>
+                <a href="../pages_darkMode/contacto_DM.html" class="icon toggle-darkmode"><img
+                        src="../media/iconos/luna.png" alt="Modo oscuro"></a>
                 <a href="perfil.html" class="icon"><img src="../media/iconos/perfil_LM.png" alt="Perfil"></a>
             </div>
 
@@ -84,20 +93,15 @@
         </div>
     </header>
 
-    <main class="container-main">
 
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container-main">
         <div class="contacto-container">
             <div class="informacion-contacto">
-                <p>📍Plaza el Cuartel, 177, 11930, Chiclana (Cádiz)</p>
-                <section class="-contacto">
-                    <pre>
-                <p>📧  voluntariado@refugiokimba.info
-        tesoreria@refugiokimba.info
-        presidenta@refugiokimba.info
-        informacion@refugiokimba.info</p>
-                </pre>
-                    <p>📞+34 987 654 321</p>
-                    <p>🕘Lunes - Viernes: 9:00 - 15:00</p>
+                <p>📍 Plaza el Cuartel, 177, 11930, Chiclana (Cádiz)</p>
+                <p>📧 voluntariado@refugiokimba.info</p>
+                <p>📞 +34 987 654 321</p>
+                <p>🕘 Lunes - Viernes: 9:00 - 15:00</p>
             </div>
             <div class="mapa-container">
                 <iframe
@@ -110,7 +114,8 @@
 
         <section class="formulario-contacto">
             <h2>📩 Envíanos un mensaje</h2>
-            <form id="form-contacto">
+            <!-- Aquí se agregó `onsubmit="mostrarPopup(event)"` -->
+            <form id="form-contacto" onsubmit="mostrarPopup(event)">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
 
@@ -123,13 +128,11 @@
                 <button type="submit">Enviar Mensaje</button>
             </form>
         </section>
-        </div>
-
     </main>
 
     <script src="../js/donacion.js"></script>
-    <script src="../misc/base.js"></script>
-    
+    <script src="../js/popup_formulario.js"></script>
+    <script src="../js/responsive.js"></script>
 
     <footer>
         <div class="container-footer">
