@@ -53,7 +53,7 @@
             </div>
 
             <nav class="header-center">
-                <a href="../pages_lightMode/sobrenosotros.html" class="nav-link">Sobre nosotros</a>
+                <a href="../pages_lightMode/sobre_nosotros.html" class="nav-link">Sobre nosotros</a>
 
                 <div class="dropdown">
                     <a class="nav-link">Adopta</a>
@@ -80,7 +80,7 @@
                 <a href="../pages_darkMode/perfil_DM.html" class="icon toggle-darkmode">
                     <img src="../media/iconos/luna.png" alt="Modo oscuro">
                 </a>
-                <a href="../pages_lightMode/perfil.html" class="icon perfil-icon"> <!-- ✅ Agregar la clase perfil-icon -->
+                <a href="../pages_lightMode/perfil.html" class="icon perfil-icon">
                     <img src="../media/images/foto_perfill.jpg" alt="Perfil">
                 </a>
             </div>
@@ -119,65 +119,74 @@
                     <p><strong>Vera</strong> ha encontrado un hogar definitivo. 🎉</p>
                 </div>
             </div>
-
-        </div>
-        <!-- 📌 POPUP para enviar correo -->
-        <div id="popup-correo" class="popup">
-            <div class="popup-content">
-                <h2>Enviar Correo</h2>
-                <form id="form-correo" onsubmit="enviarCorreo(event)">
-                    <label for="para">Para:</label>
-                    <input type="email" id="para" name="para" required>
-
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-                    <div class="popup-buttons">
-                        <button type="submit" class="enviar">Enviar</button>
-                        <button type="button" class="cancelar" onclick="cerrarPopupCorreo()">Cancelar</button>
-                    </div>
-                </form>
-            </div>
         </div>
 
-        <!-- POPUP PARA EDITAR PERFIL -->
-        <div id="popup-editar" class="popup">
-            <div class="popup-content">
-                <h2>Editar Perfil</h2>
-                <form id="form-editar" onsubmit="guardarEdicion(event)">
-                    <label for="nuevoNombre">Nuevo Nombre:</label>
-                    <input type="text" id="nuevoNombre" name="nuevoNombre" required>
 
-                    <label for="nuevoApellido">Nuevo Apellido:</label>
-                    <input type="text" id="nuevoApellido" name="nuevoApellido" required>
-
-                    <label for="nuevaFoto">Cambiar Foto:</label>
-                    <input type="file" id="nuevaFoto" name="nuevaFoto" accept="image/*">
-
-                    <div class="popup-buttons">
-                        <button type="submit" class="enviar">Guardar</button>
-                        <button type="button" class="cancelar" onclick="cerrarPopupEditar()">Cancelar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- POPUP DE CONFIRMACIÓN -->
-        <div id="popup-guardado" class="popup">
-            <div class="popup-content">
-                <p>Cambios guardados con éxito.</p>
-                <button class="boton-confirmacion" data-popup-id="popup-guardado">Aceptar</button>
-            </div>
-        </div>
 
     </main>
+    <!-- 📌 POPUP para enviar correo -->
+    <div id="popup-correo" class="popup">
+        <div class="popup-content">
+            <h2>Enviar Correo</h2>
+            <form id="form-correo" onsubmit="enviarCorreo(event)">
+                <label for="para">Para:</label>
+                <input type="email" id="para" name="para" required>
 
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+                <div class="popup-buttons">
+                    <button type="submit" class="enviar">Enviar</button>
+                    <button type="button" class="cancelar" onclick="cerrarPopupCorreo()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- POPUP PARA EDITAR PERFIL -->
+    <div id="popup-editar" class="popup">
+        <div class="popup-content">
+            <h2>Editar Perfil</h2>
+            <form id="form-editar" onsubmit="guardarEdicion(event)">
+                <label for="nuevoNombre">Nuevo Nombre:</label>
+                <input type="text" id="nuevoNombre" name="nuevoNombre" required>
+
+                <label for="nuevaFoto">Cambiar Foto:</label>
+                <input type="file" id="nuevaFoto" name="nuevaFoto" accept="image/*">
+
+                <div class="popup-buttons">
+                    <button onclick="abrirPopupEditar()">Guardar</button>
+                    <button type="button" class="cancelar" onclick="cerrarPopupEditar()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <!-- SCRIPTS -->
-    <script src="../misc/base.js"></script>
     <script src="../js/donacion.js"></script>
     <script src="../js/perfil.js"></script>
     <script src="../js/confirmar.js"></script>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container-footer">
+            <p>Diseminado Pago el Cuartillo, 177, 11130, Cádiz</p>
+            <nav>
+                <a href="../pages_lightMode/error_404.html">Términos y Condiciones</a> |
+                <a href="../pages_lightMode/error_404.html">Política de Privacidad</a> |
+                <a href="../pages_lightMode/error_404.html">Acceso Legal</a> |
+                <a href="../pages_lightMode/error_404.html">Política de Cookies</a>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/refugiokimba.org/?locale=es_ES" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="../media/iconos/logo-facebook.svg" alt="Icono de la red social Facebook">
+                </a>
+                <a href="https://www.instagram.com/refugio_kimba/" target="_blank" rel="noopener noreferrer">
+                    <img src="../media/iconos/logo-instagram.svg" alt="Icono de la red social Instagram">
+                </a>
+            </div>
 
+        </div>
+    </footer>
 </body>
 
 </html>

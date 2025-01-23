@@ -43,15 +43,16 @@
 }
 
 .registro-container button {
-    width: 100%;
-    padding: 10px;
     background-color: #33691D;
-    color: white; /* Texto en blanco */
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin: 5px;
     border: none;
     border-radius: 5px;
-    font-size: 1.2rem;
     cursor: pointer;
-    font-family: 'Quicksand_Bold', Arial, sans-serif; /* Fuente para botón */
+    font-family: 'Quicksand_Bold', Arial, sans-serif; /* Fuente consistente */
+    transition: background-color 0.3s ease;
 }
 
 .registro-container button:hover {

@@ -7,49 +7,49 @@
     <title>Refugio Kimba</title>
     <link rel="stylesheet" href="../misc/base.css">
     <link rel="stylesheet" href="../styles/apadrina.css">
-    <link rel="stylesheet" href="../styles/confirmacion.css">
+
 </head>
 
 <body>
 
-        <!-- Popup de confirmación de envío del formulario -->
-        <div id="popup-confirmacion" class="popup">
-            <div class="popup-content">
-                <h2>Formulario enviado con éxito.</h2>
-                <button onclick="cerrarPopupConfirmacion()">Aceptar</button>
+    <!-- Popup de confirmación de envío del formulario -->
+    <div id="popup-confirmacion" class="popup">
+        <div class="popup-content">
+            <h2>Acción realizada con éxito.</h2>
+            <button class="cerrar-popup">Aceptar</button>
+        </div>
+    </div>
+
+    <!-- Pop Up donación -->
+    <div id="popup-donacion" class="popup">
+        <div class="popup-content">
+            <h2>Donación</h2>
+
+            <!-- Formulario de donación -->
+            <form id="form-apadrinamiento" class="formulario-popup" onsubmit="mostrarPopup(event)">
+                <label for="titular">Nombre del titular:</label>
+                <input type="text" id="titular" name="titular" required>
+
+                <label for="tarjeta">Número de tarjeta:</label>
+                <input type="text" id="tarjeta" name="tarjeta" maxlength="16" pattern="\d{16}" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" maxlength="3" pattern="\d{3}" required>
+
+                <label for="cantidad">Cantidad a donar (€):</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+                <button type="submit">Donar</button>
+                <button type="button" onclick="cerrarPopupDonacion()">Cancelar</button>
+            </form>
+
+            <!-- Mensaje de confirmación (inicialmente oculto) -->
+            <div id="mensaje-confirmacion" style="display: none;">
+                <p>Donación realizada con éxito. ¡Gracias por tu apoyo!</p>
+                <button onclick="cerrarPopupDonacion()">Aceptar</button>
             </div>
         </div>
-        
-        <!-- Pop Up donación -->
-        <div id="popup-donacion" class="popup">
-            <div class="popup-content">
-                <h2>Donación</h2>
-    
-                <!-- Formulario de donación -->
-                <form id="form-donacion" onsubmit="procesarDonacion(event)">
-                    <label for="titular">Nombre del titular:</label>
-                    <input type="text" id="titular" name="titular" required>
-    
-                    <label for="tarjeta">Número de tarjeta:</label>
-                    <input type="text" id="tarjeta" name="tarjeta" maxlength="16" pattern="\d{16}" required>
-    
-                    <label for="cvv">CVV:</label>
-                    <input type="text" id="cvv" name="cvv" maxlength="3" pattern="\d{3}" required>
-    
-                    <label for="cantidad">Cantidad a donar (€):</label>
-                    <input type="number" id="cantidad" name="cantidad" min="1" required>
-    
-                    <button type="submit">Donar</button>
-                    <button type="button" onclick="cerrarPopupDonacion()">Cancelar</button>
-                </form>
-    
-                <!-- Mensaje de confirmación (inicialmente oculto) -->
-                <div id="mensaje-confirmacion" style="display: none;">
-                    <p>Donación realizada con éxito. ¡Gracias por tu apoyo!</p>
-                    <button onclick="cerrarPopupDonacion()">Aceptar</button>
-                </div>
-            </div>
-        </div>
+    </div>
 
     <!-- HEADER -->
     <header>
@@ -159,9 +159,8 @@
         </section>
     </main>
 
-    <script src="../js/responsive.js"></script>
-    <script src="../js/confirmar.js"></script>
-    <script src="../js/donacion.js"></script>
+
+
 
     <!-- FOOTER -->
     <footer>
@@ -183,6 +182,12 @@
             </div>
         </div>
     </footer>
+
+    <script src="../js/responsive.js"></script>
+    <script src="../js/popup_formulario.js"></script>
+    <script src="../js/donacion.js"></script>
+    <script src="../js/confirmar.js"></script>
+    
 </body>
 
 </html>

@@ -13,12 +13,10 @@
     <!-- Popup de confirmación de envío del formulario -->
     <div id="popup-confirmacion" class="popup">
         <div class="popup-content">
-            <h2>Formulario enviado con éxito.</h2>
+            <h2>Acción realizada con éxito.</h2>
             <button onclick="cerrarPopupConfirmacion()">Aceptar</button>
         </div>
     </div>
-
-
 
     <!-- Pop Up donación -->
     <div id="popup-donacion" class="popup">
@@ -102,7 +100,7 @@
         <section>
             <article class="formulario">
                 <h2>Formulario de Acogida</h2>
-                <form id="formulario-acogida" onsubmit="mostrarPopup(event)">
+                <form id="formulario-popup" onsubmit="mostrarPopup(event)">
                     <!-- Datos personales -->
                     <div>
                         <label for="nombre">Nombre completo</label>
@@ -177,7 +175,7 @@
                         </select>
                     </div>
 
-                    <button type="submit">Enviar Solicitud</button>
+                    <button onclick="cerrarPopupConfirmacion()">Enviar Formulario</button>
                 </form>
             </article>
         </section>
@@ -187,6 +185,7 @@
     <script src="../js/responsive.js"></script>
     <script src="../js/donacion.js"></script>
     <script src="../js/popup_formulario.js"></script>
+    <script src="../js/confirmar.js"></script>
 
     <!-- FOOTER -->
     <footer>

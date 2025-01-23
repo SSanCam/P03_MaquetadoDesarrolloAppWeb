@@ -107,7 +107,7 @@
 /* ========================== */
 /* POPUPS - Estilos generales */
 /* ========================== */
-.popup {
+.popup-editar {
     display: none; /* Oculto por defecto */
     position: fixed;
     top: 0;
@@ -121,7 +121,7 @@
 }
 
 .popup-content {
-    background-color: #ffffff;
+    background-color: #ccc;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -135,11 +135,13 @@
     color: #33691D;
 }
 
+
 .popup-content label {
     display: block;
     text-align: left;
     margin-top: 10px;
     font-weight: bold;
+    color: #33691D;
 }
 
 .popup-content input,
@@ -166,23 +168,9 @@
     cursor: pointer;
 }
 
-.popup-buttons .enviar {
-    background-color: #33691D;
-    color: ffffff;
-}
-
-.popup-buttons .cancelar {
-    background-color: #33691D;
-}
-
-.popup-buttons .enviar:hover {
+.popup-buttons button:hover {
     background-color: #D29F68;
 }
-
-.popup-buttons .cancelar:hover {
-    background-color: #D29F68;
-}
-
 
 .icon img {
     height: 50px;

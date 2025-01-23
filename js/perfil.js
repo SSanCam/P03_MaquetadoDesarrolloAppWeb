@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     let popupCorreo = document.getElementById("popup-correo");
     let popupEnviado = document.getElementById("popup-enviado");
-    let popupEditar = document.getElementById("popup-editar"); 
+    let popupEditar = document.getElementById("popup-editar");
     let popupGuardado = document.getElementById("popup-guardado");
+    let popupConfirmacion = document.getElementById("popup-confirmacion"); // Popup genérico de confirmación
 
     // 🔹 Función para abrir el popup de correo
     window.abrirPopupCorreo = function () {
@@ -14,16 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
         popupCorreo.style.display = "none";
     };
 
-    // 🔹 Función para cerrar el popup de confirmación de correo
-    window.cerrarPopupEnviado = function () {
-        popupEnviado.style.display = "none";
-    };
-
-    // 🔹 Función para simular el envío del correo
+    // 🔹 Función para simular el envío del correo y mostrar popup de confirmación
     window.enviarCorreo = function (event) {
         event.preventDefault();
         popupCorreo.style.display = "none";
-        popupEnviado.style.display = "flex";
+        mostrarPopupConfirmacion("Correo enviado con éxito.");
     };
 
     // =========================
@@ -40,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         popupEditar.style.display = "none";
     };
 
-    // 🔹 Función para guardar los cambios del perfil
+    // 🔹 Función para guardar los cambios del perfil y mostrar popup de confirmación
     window.guardarEdicion = function (event) {
         event.preventDefault();
 
@@ -65,19 +61,25 @@ document.addEventListener("DOMContentLoaded", function () {
             reader.readAsDataURL(nuevaFoto);
         }
 
-        // Cerrar el popup de edición y mostrar mensaje de éxito sin cambiar de ventana
+        // Cerrar el popup de edición
         popupEditar.style.display = "none";
-        popupGuardado.style.display = "flex";
 
-        // Cerrar automáticamente el popup de confirmación después de 2 segundos
-        setTimeout(() => {
-            popupGuardado.style.display = "none";
-        }, 2000);
+        // Mostrar popup de confirmación
+        mostrarPopupConfirmacion("Cambios guardados con éxito.");
     };
 
-    // 🔹 Función para cerrar el popup de confirmación de cambios guardados manualmente
-    window.cerrarPopupGuardado = function () {
-        popupGuardado.style.display = "none";
+    // 🔹 Función para mostrar el popup genérico de confirmación
+    function mostrarPopupConfirmacion(mensaje) {
+        let mensajeConfirmacion = document.getElementById("mensaje-confirmacion-texto");
+        if (mensajeConfirmacion) {
+            mensajeConfirmacion.textContent = mensaje;
+        }
+        popupConfirmacion.style.display = "flex";
+    }
+
+    // 🔹 Función para cerrar el popup de confirmación
+    window.cerrarPopupConfirmacion = function () {
+        popupConfirmacion.style.display = "none";
     };
 
     // Agregar el evento de submit al formulario de edición de perfil

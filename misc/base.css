@@ -390,6 +390,8 @@ footer {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Quicksand_Bold', Arial, sans-serif;
+    /* Fuente consistente */
     transition: background-color 0.3s ease;
 }
 
@@ -417,109 +419,6 @@ footer {
     }
 }
 
-/* ======================= */
-/* POPUP DE CONFIRMACIÓN */
-/* ======================= */
-
-.popup {
-    display: none;
-    /* Oculto por defecto */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    /* Fondo semitransparente */
-    z-index: 2000;
-    /* Prioridad alta para el popup */
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.popup.show {
-    display: flex;
-    /* Mostrar al activarse */
-}
-
-.popup-content {
-    background-color: #D29F68;
-    /* Fondo del popup */
-    border-radius: 15px;
-    padding: 20px;
-    max-width: 500px;
-    width: 90%;
-    text-align: center;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    /* Sombra */
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-.popup-content h2 {
-    color: #33691D;
-    /* Verde para el encabezado */
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    font-family: 'Quicksand_Bold', Arial, sans-serif;
-}
-
-.popup-content p {
-    color: #ffffff;
-    /* Texto en blanco */
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    font-family: 'Quicksand_Light', Arial, sans-serif;
-}
-
-.popup-content button {
-    background-color: #33691D;
-    /* Verde oscuro */
-    color: #ffffff;
-    /* Texto blanco */
-    font-size: 1rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Quicksand_Bold', Arial, sans-serif;
-    transition: background-color 0.3s ease;
-}
-
-.popup-content button:hover {
-    background-color: #8BC24A;
-    /* Verde claro */
-}
-
-/* Animación de entrada */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-button {
-    background-color: #33691D;
-    color: #ffffff;
-    font-size: 1rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Quicksand_Bold', Arial, sans-serif;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #8BC24A;
-}
-
 
 /* Estilos del menú hamburguesa */
 .menu-toggle {
@@ -537,18 +436,6 @@ button:hover {
     border-radius: 2px;
 }
 
-/* Esconder el menú en pantallas pequeñas */
-.menu {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.menu-active {
-    display: flex;
-    flex-direction: column;
-}
-
 /* Media Query para pantallas pequeñas */
 @media screen and (max-width: 768px) {
     .menu {
@@ -562,10 +449,46 @@ button:hover {
     .menu-toggle {
         display: flex;
     }
+
 }
 
-/* Ajustar textos */
-.responsive-text {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+/* ======================= */
+/* POPUP DE CONFIRMACION */
+/* ======================= */
+#popup-confirmacion {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+#popup-confirmacion .popup-content {
+    background-color: #D29F68;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#popup-confirmacion .popup-content button {
+    margin-top: 15px;
+    background-color: #33691D;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Quicksand_Bold', Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+#popup-confirmacion .popup-content button:hover {
+    background-color: #8BC24A;
 }

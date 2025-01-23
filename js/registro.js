@@ -3,6 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     formulario.addEventListener("submit", function (event) {
         event.preventDefault(); // Evita el envío del formulario
-        window.location.href = "perfil.html"; // Redirige a la página de perfil
+        window.location.href = "../pages_lightMode/login.html"; // Redirige a la página de login para iniciar sesino con el nuevo registro
     });
 });
