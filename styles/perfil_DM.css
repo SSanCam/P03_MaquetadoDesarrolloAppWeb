@@ -228,3 +228,55 @@
 .perfil-icon:hover {
     transform: scale(1.1); /* Efecto de agrandado */
 }
+
+/* ========================== */
+/* POPUP DE CONFIRMACIÓN */
+/* ========================== */
+#popup-confirmacion {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+#popup-confirmacion .popup-content {
+    background-color: #63797F; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra alrededor del popup */
+    text-align: center;
+    width: 300px;
+}
+
+#popup-confirmacion h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #D29F68; /* Color verde oscuro */
+}
+
+#popup-confirmacion .popup-buttons {
+    display: flex;
+    justify-content: center; /* Centra el botón */
+    margin-top: 15px;
+}
+
+#popup-confirmacion .popup-buttons button {
+    width: 80%; /* Botón ancho */
+    padding: 10px;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #33691D; /* Fondo marrón claro */
+    color: #fff; /* Texto blanco */
+}
+
+#popup-confirmacion .popup-buttons button:hover {
+    background-color: #D29F68; /* Cambia a un marrón más oscuro al pasar el cursor */
+}

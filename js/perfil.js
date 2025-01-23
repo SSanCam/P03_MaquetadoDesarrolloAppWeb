@@ -1,59 +1,55 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let popupCorreo = document.getElementById("popup-correo");
-    let popupEnviado = document.getElementById("popup-enviado");
-    let popupEditar = document.getElementById("popup-editar");
-    let popupGuardado = document.getElementById("popup-guardado");
-    let popupConfirmacion = document.getElementById("popup-confirmacion"); // Popup genérico de confirmación
+    // Función genérica para abrir/cerrar popups
+    function togglePopup(popupId, show = true) {
+        const popup = document.getElementById(popupId);
+        if (popup) {
+            popup.style.display = show ? 'flex' : 'none';
+        }
+    }
 
-    // 🔹 Función para abrir el popup de correo
-    window.abrirPopupCorreo = function () {
-        popupCorreo.style.display = "flex";
-    };
+    // Función para mostrar mensajes en popups de confirmación
+    function mostrarMensajeConfirmacion(mensaje, popupId = "popup-confirmacion", mensajeId = "mensaje-confirmacion-texto") {
+        const mensajeElemento = document.getElementById(mensajeId);
+        if (mensajeElemento) {
+            mensajeElemento.textContent = mensaje;
+        }
+        togglePopup(popupId, true);
+    }
 
-    // 🔹 Función para cerrar el popup de correo
-    window.cerrarPopupCorreo = function () {
-        popupCorreo.style.display = "none";
-    };
+    // Abrir y cerrar popups (reutilizando funciones genéricas)
+    window.abrirPopupCorreo = () => togglePopup("popup-correo");
+    window.cerrarPopupCorreo = () => togglePopup("popup-correo", false);
 
-    // 🔹 Función para simular el envío del correo y mostrar popup de confirmación
+    window.abrirPopupEditar = () => togglePopup("popup-editar");
+    window.cerrarPopupEditar = () => togglePopup("popup-editar", false);
+
+    window.cerrarPopupConfirmacion = () => togglePopup("popup-confirmacion", false);
+
+    // Función para enviar correo
     window.enviarCorreo = function (event) {
         event.preventDefault();
-        popupCorreo.style.display = "none";
-        mostrarPopupConfirmacion("Correo enviado con éxito.");
+        togglePopup("popup-correo", false);
+        mostrarMensajeConfirmacion("Correo enviado con éxito.");
     };
 
-    // =========================
-    // POPUP DE EDICIÓN DE PERFIL
-    // =========================
-
-    // 🔹 Función para abrir el popup de edición
-    window.abrirPopupEditar = function () {
-        popupEditar.style.display = "flex";
-    };
-
-    // 🔹 Función para cerrar el popup de edición
-    window.cerrarPopupEditar = function () {
-        popupEditar.style.display = "none";
-    };
-
-    // 🔹 Función para guardar los cambios del perfil y mostrar popup de confirmación
+    // Función para guardar cambios de perfil
     window.guardarEdicion = function (event) {
         event.preventDefault();
 
-        let nuevoNombre = document.getElementById("nuevoNombre").value;
-        let nuevaFoto = document.getElementById("nuevaFoto").files[0];
+        const nuevoNombre = document.getElementById("nuevoNombre").value;
+        const nuevaFoto = document.getElementById("nuevaFoto").files[0];
 
         if (nuevoNombre) {
-            let perfilNombre = document.getElementById("perfilNombre");
+            const perfilNombre = document.getElementById("perfilNombre");
             if (perfilNombre) {
                 perfilNombre.textContent = "Nombre: " + nuevoNombre;
             }
         }
 
         if (nuevaFoto) {
-            let reader = new FileReader();
+            const reader = new FileReader();
             reader.onload = function (e) {
-                let perfilFoto = document.getElementById("perfilFoto");
+                const perfilFoto = document.getElementById("perfilFoto");
                 if (perfilFoto) {
                     perfilFoto.src = e.target.result;
                 }
@@ -61,29 +57,12 @@ document.addEventListener("DOMContentLoaded", function () {
             reader.readAsDataURL(nuevaFoto);
         }
 
-        // Cerrar el popup de edición
-        popupEditar.style.display = "none";
-
-        // Mostrar popup de confirmación
-        mostrarPopupConfirmacion("Cambios guardados con éxito.");
+        togglePopup("popup-editar", false);
+        mostrarMensajeConfirmacion("Cambios guardados con éxito.");
     };
 
-    // 🔹 Función para mostrar el popup genérico de confirmación
-    function mostrarPopupConfirmacion(mensaje) {
-        let mensajeConfirmacion = document.getElementById("mensaje-confirmacion-texto");
-        if (mensajeConfirmacion) {
-            mensajeConfirmacion.textContent = mensaje;
-        }
-        popupConfirmacion.style.display = "flex";
-    }
-
-    // 🔹 Función para cerrar el popup de confirmación
-    window.cerrarPopupConfirmacion = function () {
-        popupConfirmacion.style.display = "none";
-    };
-
-    // Agregar el evento de submit al formulario de edición de perfil
-    let formEditar = document.getElementById("form-editar");
+    // Vincular el evento de submit del formulario
+    const formEditar = document.getElementById("form-editar");
     if (formEditar) {
         formEditar.addEventListener("submit", window.guardarEdicion);
     }
