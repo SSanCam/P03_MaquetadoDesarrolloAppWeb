@@ -147,6 +147,52 @@ header {
     transform: scale(1.2);
 }
 
+
+/* ======================= */
+/* MENÚ DESPLEGABLE */
+/* ======================= */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    border-radius: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+    min-width: 150px;
+    z-index: 1000;
+    border: 2px solid #33691D;
+    background-color:#8BC24A;
+
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: inherit; /* Hereda el color del contexto */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Efecto hover genérico */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
 /* ======================= */
 /* MAIN */
 /* ======================= */
