@@ -78,8 +78,8 @@ header {
     background-color: #8BC24A;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+    justify-content: center;
+    padding: 0 20px;
 }
 
 .container-header {
@@ -90,9 +90,16 @@ header {
     justify-content: space-between;
 }
 
+.header-left-space,
+.header-right-space {
+    flex: 1;
+}
+
 .header-left {
     display: flex;
     align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .header-left a {
@@ -126,25 +133,166 @@ header {
     background-color: #33691D;
     border-radius: 10px;
     transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
 }
 
 .nav-link:hover {
     background-color: #D29F68;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #8BC24A;
+    border-radius: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+    min-width: 150px;
+    z-index: 100;
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #33691D;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 .header-right {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 15px;
+    flex: 0 0 auto;
 }
 
 .icon img {
     height: 50px;
+    vertical-align: middle;
     transition: transform 0.3s ease;
 }
 
 .icon img:hover {
     transform: scale(1.2);
+}
+
+/* ======================= */
+/* POPUP DE DONACIONES */
+/* ======================= */
+
+.popup {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fondo semitransparente */
+    z-index: 2000;
+    /* Por encima de otros elementos */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.popup.show {
+    display: flex;
+    /* Mostrar al activarse */
+}
+
+.popup-content {
+    background-color: #ccc;
+    /* Fondo blanco */
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-content h2 {
+    color: #D29F68;
+    /* Color del encabezado */
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.popup-content label {
+    display: block;
+    font-size: 1rem;
+    margin: 10px 0 5px;
+    color: #000000;
+}
+
+.popup-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.popup-content button {
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.popup-content button:hover {
+    background-color: #D29F68;
+}
+
+/* Mensaje de confirmación */
+#mensaje-confirmacion p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 
