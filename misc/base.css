@@ -485,23 +485,12 @@ footer {
 }
 
 /* ===========================*/
-/* RESPONSIVE Pantalla normal*/
-/* ======================= */
-
-@media screen and (max-width: 768px) {
-    .header-center {
-        display: flex;
-    }
-}
-
-/* ===========================*/
 /* RESPONSIVE Pantalla Movil*/
 /* ======================= */
 
 @media screen and (max-width: 768px) {
     .header-center {
         display: none;
-        /* Ocultar menú normal */
         position: absolute;
         top: 10vh;
         left: 0;
@@ -518,8 +507,7 @@ footer {
     }
 
     .menu-toggle {
-        display: flex;
-        /* Mostrar botón hamburguesa */
+        display: none;
     }
 
     .header-center a {
