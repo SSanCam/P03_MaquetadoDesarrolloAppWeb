@@ -90,11 +90,6 @@ header {
     justify-content: space-between;
 }
 
-.header-left-space,
-.header-right-space {
-    flex: 1;
-}
-
 .header-left {
     display: flex;
     align-items: center;
@@ -146,6 +141,10 @@ header {
     display: inline-block;
 }
 
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -171,10 +170,6 @@ header {
 
 .dropdown-menu a:hover {
     background-color: #33691D;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
 }
 
 .header-right {
@@ -269,8 +264,6 @@ header {
     transition: background-color 0.3s ease;
 }
 
-
-
 .popup-content button:hover {
     background-color: #D29F68;
 }
@@ -294,55 +287,6 @@ header {
         transform: scale(1);
     }
 }
-
-
-/* ======================= */
-/* MENÚ DESPLEGABLE */
-/* ======================= */
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    border-radius: 15px;
-    list-style: none;
-    padding: 0;
-    margin: 5px 0;
-    min-width: 150px;
-    z-index: 1000;
-    border: 2px solid #33691D;
-    background-color: #8BC24A;
-
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    /* Sombra ligera */
-}
-
-.dropdown-menu li {
-    display: block;
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 10px;
-    color: inherit;
-    /* Hereda el color del contexto */
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.dropdown-menu a:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    /* Efecto hover genérico */
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
 
 /* ======================= */
 /* MAIN */
@@ -487,23 +431,25 @@ footer {
 /* ===========================*/
 /* RESPONSIVE Pantalla Movil*/
 /* ======================= */
-
 @media screen and (max-width: 768px) {
-    .header-center {
+    .dropdown-menu {
         display: none;
+        /* Oculto por defecto */
         position: absolute;
-        top: 10vh;
+        top: 100%;
         left: 0;
         width: 100%;
         background-color: #8BC24A;
-        flex-direction: column;
-        padding: 10px 0;
-        z-index: 1000;
+        border-radius: 10px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
 
-    .header-center.active {
-        display: flex;
+    .dropdown.active .dropdown-menu {
+        display: block;
     }
+
     /* Botón */
     .menu-toggle {
         display: block;
