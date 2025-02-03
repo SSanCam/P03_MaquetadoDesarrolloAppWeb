@@ -54,24 +54,24 @@
                 </a>
             </div>
 
-            <!--  Menú hamburguesa  -->
+            <!-- Menú hamburguesa -->
             <div class="menu-toggle" onclick="toggleMenu()">
-                <img src="../media/iconos/MHamburguesa.png" alt="Menú" class="icono-menu">
+                <img src="../media/iconos/menu-hamburguesa.svg" alt="Menú" class="icono-menu">
             </div>
-            <!--  Enlaces del menú hamburguesa  -->
-            <nav alt="Apartados menú hamburguesa">
-                <a href="../pages_darkMode/sobrenosotros_DM.html" alt="Sobre nosotros" class="nav-link">Sobre
-                    nosotros</a>
-                <a href="../pages_darkMode/adopta_perro_DM.html" alt="Adopta - Perros" class="nav-link">🐶 Adopta -
-                    Perros</a>
-                <a href="../pages_darkMode/adopta_gato_DM.html" alt="Adopta - Gatos" class="nav-link">🐱 Adopta -
-                    Gatos</a>
-                <a href="../pages_darkMode/acoge_DM.html" alt="Acoge" class="nav-link">🏠 Acoge</a>
-                <a href="#" onclick="abrirPopupDonacion(); return false;" alt="Dona">💰 Dona</a>
-                <a href="../pages_darkMode/apadrina_DM.html" alt="Apadrina" class="nav-link">❤️ Apadrina</a>
-                <a href="../pages_darkMode/contacto_DM.html" alt="Contacta" class="nav-link">Contacta</a>
-                <a href="../pages_darkMode/construccion_DM.html" alt="Tienda" class="nav-link">Tienda</a>
+
+            <!-- Enlaces del menú hamburguesa (deben estar fuera de .menu-toggle) -->
+            <nav class="menu-hamburguesa">
+                <a href="../pages_darkMode/sobrenosotros_DM.html" class="nav-link">Sobre nosotros</a>
+                <a href="../pages_darkMode/adopta_perro_DM.html" class="nav-link">🐶 Adopta - Perros</a>
+                <a href="../pages_darkMode/adopta_gato_DM.html" class="nav-link">🐱 Adopta - Gatos</a>
+                <a href="../pages_darkMode/acoge_DM.html" class="nav-link">🏠 Acoge</a>
+                <a href="#" onclick="abrirPopupDonacion(); return false;">💰 Dona</a>
+                <a href="../pages_darkMode/apadrina_DM.html" class="nav-link">❤️ Apadrina</a>
+                <a href="../pages_darkMode/contacto_DM.html" class="nav-link">Contacta</a>
+                <a href="../pages_darkMode/construccion_DM.html" class="nav-link">Tienda</a>
             </nav>
+
+
 
             <nav class="header-center">
                 <a href="../pages_lightMode/sobre_nosotros.html" class="nav-link">Sobre nosotros</a>
@@ -179,11 +179,7 @@
                 </a>
             </div>
 
-
-
-
         </div>
-        <script src="../js/responsive.js"></script>
         <script src="../js/menuHamburguesa.js"></script>
         <script src="../js/carousel-imagen.js"></script>
         <script src="../js/donacion.js"></script>

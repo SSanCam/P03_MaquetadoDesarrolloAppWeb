@@ -16,15 +16,23 @@
                 <div class="contenedor-global">
             <div class="message">
                 <div class="texto-error">
-                    <h1>ERROR 404</h1>
+                <!-- 
+                Hemos probado en ésta página colocar el estilo del texto h1 en la propia etiqueta, aunque para pequeños
+                arreglos, en un código pequeño, puede ser fácil, pero teniendo en cuenta que los elementos que se repiten y 
+                deben mantener el mismo diseño, es más cómodo, útil y fácil si lo agrupamos archivo concreto que maneje el
+                diseño de todos los elementos del mismo tipo de la página. Incluso del resto del proyecto. Por ejemplo, en 
+                nuestro proyecto mantenermos una página de estilos globales, que se repetirán a lo largo de distintas páginas,
+                y una página de estilos para cada página que lo necesite, para los elementos concretos de esas páginas.
+                -->
+                    <h1 style="color: greenyellow; font-family: 'Quicksand_Light, Arial';">ERROR 404</h1>
                 </div>
                 <div class="texto-complementario">
                     <p>Parece que el rastro se ha perdido...</p>
                     <p>¡Pero hay muchos otros que puedes seguir en nuestro refugio!</p>
 
                     <!-- Logo de huella enlazado a la página principal -->
-                    <a href="../pages_darkMode/principal_DM.html" class="paw-logo">
-                        <img src="../media/images/huella.png"
+                    <a href="../pages_lightMode/principal.html" class="paw-logo">
+                        <img src="../media/iconos/loading.png"
                             alt="Huella de animal con la representación de un corazón en el centro.">
                     </a>
                 </div>

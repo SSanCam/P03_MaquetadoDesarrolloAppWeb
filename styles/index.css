@@ -120,25 +120,3 @@ strong, b {
 .boton-entrar:hover {
     background-color: #33691D; /* Cambio de color al pasar el mouse */
 }
-
-/* ======================= */
-/* MEDIA QUERIES - RESPONSIVE */
-/* ======================= */
-@media (max-width: 768px) {
-    .contenedor-texto {
-        max-width: 90%;
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-}

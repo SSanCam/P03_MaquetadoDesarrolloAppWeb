@@ -1,14 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Manejo del menú hamburguesa
+document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".header-center");
-    const icono = document.querySelector(".menu-toggle img"); // Referencia correcta al icono
+    const menuHamburguesa = document.querySelector(".menu-hamburguesa");
+    const icono = document.querySelector(".menu-toggle img");
 
-    menuToggle.addEventListener("click", function() {
-        menu.classList.toggle("active");
+    // Asegurarse de que el menú está oculto al cargar la página
+    menuHamburguesa.classList.remove("active");
 
-        // Cambiar el ícono cuando el menú está activo o inactivo
-        if (menu.classList.contains("active")) {
+    menuToggle.addEventListener("click", function () {
+        menuHamburguesa.classList.toggle("active");
+
+        // Cambiar el icono cuando el menú está activo o inactivo
+        if (menuHamburguesa.classList.contains("active")) {
             icono.src = "../media/iconos/MHamburguesa.png"; // Icono de "X" cuando el menú está abierto
         } else {
             icono.src = "../media/iconos/MHamburguesa.png"; // Icono normal cuando está cerrado

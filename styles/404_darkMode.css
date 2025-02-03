@@ -7,7 +7,7 @@ body {
     background-size: 50%; /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
     height: 100vh; /* Asegura que el fondo ocupe toda la altura de la ventana */
     margin: 0;
-    background-color: #233746;
+    background-color: #4b6070;
 }
 
 /* Fondo de la imagen dentro del div */
@@ -78,13 +78,22 @@ body {
     margin-top: 20px;
 }
 
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .paw-logo img {
     width: 60px;
     height: auto;
     transition: transform 0.3s ease;
+    animation: rotate 5s infinite linear;
 }
 
 .paw-logo img:hover {
-    transform: scale(1.2);
+    transform: scale(1.2) rotate(600deg);
 }
-
