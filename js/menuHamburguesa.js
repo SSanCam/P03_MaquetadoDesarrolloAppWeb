@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Cambiar el icono cuando el menú está activo o inactivo
         if (menuHamburguesa.classList.contains("active")) {
-            icono.src = "../media/iconos/MHamburguesa.png"; // Icono de "X" cuando el menú está abierto
+            icono.src = "../media/iconos/MHamburguesa.svg"; // Icono de "X" cuando el menú está abierto
         } else {
-            icono.src = "../media/iconos/MHamburguesa.png"; // Icono normal cuando está cerrado
+            icono.src = "../media/iconos/menu-hamburguesa.svg"; // Icono normal cuando está cerrado
         }
     });
 });
